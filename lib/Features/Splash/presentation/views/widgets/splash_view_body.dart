@@ -1,6 +1,8 @@
 import 'package:depi_lms/Features/Splash/presentation/views/widgets/sliding_image.dart';
 import 'package:depi_lms/Features/Splash/presentation/views/widgets/sliding_text.dart';
+import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -70,8 +72,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigateToHome() {
-    Future.delayed(const Duration(seconds: 3), () {
-      // GoRouter.of(context).push(AppRouter.kHomeView);
+    Future.delayed(const Duration(milliseconds: 2600), () {
+      GoRouter.of(context).push(AppRouter.KLoginView);
     });
   }
 }
