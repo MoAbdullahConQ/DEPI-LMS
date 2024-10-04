@@ -10,10 +10,13 @@ class CustomButton extends StatelessWidget {
       this.textStyle,
       this.backgroundColor,
       required this.text});
+
+      
   String text;
   TextStyle? textStyle;
   Color? backgroundColor;
   VoidCallback? onTap;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

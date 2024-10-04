@@ -1,10 +1,13 @@
 import 'package:depi_lms/Features/Authentication/presentation/views/login_view.dart';
+import 'package:depi_lms/Features/Authentication/presentation/views/register_one_view.dart';
 import 'package:depi_lms/Features/Splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
-
-static const KLoginView='/loginView';
+  static const kLoginView = '/loginView';
+  static const kRegisterOneView = '/registerOneView';
+  static const kRegisterTwoView = '/registerTwoView';
+  static const kRegisterThreeView = '/registerThreeView';
 
   static final routers = GoRouter(
     routes: [
@@ -13,9 +16,21 @@ static const KLoginView='/loginView';
         builder: (context, state) => const SplashView(),
       ),
       GoRoute(
-        path: KLoginView,
+        path: kLoginView,
         builder: (context, state) => const LoginView(),
       ),
+      GoRoute(
+        path: kRegisterOneView,
+        builder: (context, state) => const RegisterOneView(),
+      ),
+      // GoRoute(
+      //   path: kRegisterTwoView,
+      //   builder: (context, state) => const RegisterTwoView(),
+      // ),
+      // GoRoute(
+      //   path: kRegisterThreeView,
+      //   builder: (context, state) => const RegisterThreeView(),
+      // ),
     ],
   );
 }

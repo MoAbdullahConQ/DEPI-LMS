@@ -1,6 +1,8 @@
 import 'package:depi_lms/Features/Authentication/presentation/views/widgets/custom_button.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/widgets/custom_text_field.dart';
+import 'package:depi_lms/Features/Authentication/presentation/views/widgets/grediant_background.dart';
 import 'package:depi_lms/constant.dart';
+import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:depi_lms/core/utils/assets.dart';
 import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -11,17 +13,7 @@ class LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          gradient: LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        colors: [
-          Colors.white,
-          Colors.white.withOpacity(.10),
-          const Color(0xff87D5BE).withOpacity(.5),
-        ],
-      )),
+    return GradientBackground(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 26, vertical: 20),
         child: ListView(
@@ -42,34 +34,34 @@ class LoginViewBody extends StatelessWidget {
               style: Styles.textStyle32,
             ),
             const SizedBox(height: 20),
-            const Text(
+            Text(
               'Login',
               style: Styles.textStyle25,
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 14),
             CustomTextFormField(
               onChanged: (v) {},
               prefixIcon: const Icon(
                 Icons.email_outlined,
-                color: kLogin,
+                color: kGreen1Color,
               ),
-              hintText: 'Email',
-              hintStyle:
-                  const TextStyle(color: kLogin, fontWeight: FontWeight.w200),
+              labelText: 'Email',
+              labelStyle: const TextStyle(
+                  color: kGreen1Color, fontWeight: FontWeight.w200),
             ),
-            const SizedBox(height: 18),
+            const SizedBox(height: 13),
             CustomTextFormField(
               onChanged: (p0) {
                 // password = p0;
               },
               prefixIcon: const Icon(
                 Icons.lock_outline,
-                color: kLogin,
+                color: kGreen1Color,
               ),
               obscure: true,
-              hintText: 'Password',
-              hintStyle:
-                  const TextStyle(color: kLogin, fontWeight: FontWeight.w200),
+              labelText: 'Password',
+              labelStyle: const TextStyle(
+                  color: kGreen1Color, fontWeight: FontWeight.w200),
             ),
             const SizedBox(height: 10),
             Row(
@@ -109,7 +101,7 @@ class LoginViewBody extends StatelessWidget {
                   style: const ButtonStyle(
                       padding: WidgetStatePropertyAll(EdgeInsets.all(0))),
                   onPressed: () {
-                    // GoRouter.of(context).push(AppRouter.register);
+                    GoRouter.of(context).push(AppRouter.kRegisterOneView);
                   },
                   child: Text('   Register',
                       style: Styles.textStyle14
