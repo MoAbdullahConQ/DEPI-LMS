@@ -7,7 +7,9 @@ class RegisterTwoView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: RegisterTwoViewBody(),
+      body: SafeArea(
+        child: RegisterTwoViewBody(),
+      ),
     );
   }
 }

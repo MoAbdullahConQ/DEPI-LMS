@@ -6,13 +6,10 @@ import 'package:depi_lms/constant.dart';
 import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 
-class RegisterTwoViewBody extends StatelessWidget {
-  const RegisterTwoViewBody({
-    super.key,
-  });
+class RegisterThreeViewBody extends StatelessWidget {
+  const RegisterThreeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,10 +32,10 @@ class RegisterTwoViewBody extends StatelessWidget {
                       CustomTextFormField(
                         onChanged: (v) {},
                         prefixIcon: const Icon(
-                          Icons.email_outlined,
+                          Icons.account_balance_outlined,
                           color: kGreen1Color,
                         ),
-                        labelText: 'Email',
+                        labelText: 'University',
                         labelStyle: const TextStyle(
                             color: kGreen1Color, fontWeight: FontWeight.w200),
                       ),
@@ -46,10 +43,10 @@ class RegisterTwoViewBody extends StatelessWidget {
                       CustomTextFormField(
                         onChanged: (v) {},
                         prefixIcon: const Icon(
-                          Icons.phone_outlined,
+                          Icons.school_outlined,
                           color: kGreen1Color,
                         ),
-                        labelText: 'Phone Number',
+                        labelText: 'Faculty',
                         labelStyle: const TextStyle(
                             color: kGreen1Color, fontWeight: FontWeight.w200),
                       ),
@@ -57,34 +54,41 @@ class RegisterTwoViewBody extends StatelessWidget {
                       CustomTextFormField(
                         onChanged: (v) {},
                         prefixIcon: const Icon(
-                          FontAwesomeIcons.linkedin,
+                          Icons.history_edu_outlined,
                           color: kGreen1Color,
                         ),
-                        suffixIcon: const Icon(FontAwesomeIcons.link),
-                        labelText: 'Linked In Link',
+                        labelText: 'Major',
                         labelStyle: const TextStyle(
                             color: kGreen1Color, fontWeight: FontWeight.w200),
                       ),
-                      const SizedBox(height: 40),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 30),
-                        child: CustomButton(
-                          onTap: () {
-                            // GoRouter.of(context).push('/');
-                          },
-                          text: 'Upload Photo Image',
-                          backgroundColor: kButton,
-                          textStyle: Styles.textStyle20.copyWith(
-                              color: Colors.white, fontWeight: FontWeight.w200),
-                          icon: const Icon(Icons.add),
+                      const SizedBox(height: 13),
+                      CustomTextFormField(
+                        onChanged: (v) {},
+                        prefixIcon: const Icon(
+                          Icons.workspace_premium_outlined,
+                          color: kGreen1Color,
                         ),
+                        labelText: 'Degree',
+                        labelStyle: const TextStyle(
+                            color: kGreen1Color, fontWeight: FontWeight.w200),
+                      ),
+                      const SizedBox(height: 13),
+                      CustomTextFormField(
+                        onChanged: (v) {},
+                        prefixIcon: const Icon(
+                          Icons.assured_workload_outlined,
+                          color: kGreen1Color,
+                        ),
+                        labelText: 'Government Of Training',
+                        labelStyle: const TextStyle(
+                            color: kGreen1Color, fontWeight: FontWeight.w200),
                       ),
                       const SizedBox(height: 50),
                       CustomButton(
                         onTap: () {
-                          GoRouter.of(context).push(AppRouter.kRegisterThreeView);
+                          GoRouter.of(context).push(AppRouter.kLoginView);
                         },
-                        text: 'Continue',
+                        text: 'Register',
                         backgroundColor: kButton,
                         textStyle:
                             Styles.textStyle20.copyWith(color: Colors.white),

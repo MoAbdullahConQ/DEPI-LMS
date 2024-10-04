@@ -3,7 +3,7 @@ import 'package:depi_lms/constant.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  CustomTextFormField({
+  const CustomTextFormField({
     super.key,
     this.prefixIcon,
     this.suffixIcon,
@@ -14,14 +14,14 @@ class CustomTextFormField extends StatelessWidget {
   });
 
   // String? hintText;
-  TextStyle? labelStyle;
-  String? labelText;
+  final TextStyle? labelStyle;
+  final String? labelText;
 
-  Function(String)? onChanged;
+  final Function(String)? onChanged;
 
-  bool? obscure;
+  final bool? obscure;
 
-  Icon? prefixIcon, suffixIcon;
+  final Icon? prefixIcon, suffixIcon;
 
   @override
   Widget build(BuildContext context) {

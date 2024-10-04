@@ -1,11 +1,7 @@
-import 'dart:ui';
-
-import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CustomButton extends StatelessWidget {
-  CustomButton(
+  const CustomButton(
       {super.key,
       this.onTap,
       this.textStyle,
@@ -13,11 +9,11 @@ class CustomButton extends StatelessWidget {
       this.backgroundColor,
       required this.text});
 
-  String text;
-  TextStyle? textStyle;
-  Color? backgroundColor;
-  Icon? icon;
-  VoidCallback? onTap;
+  final String text;
+  final TextStyle? textStyle;
+  final Color? backgroundColor;
+  final Icon? icon;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -38,11 +34,6 @@ class CustomButton extends StatelessWidget {
               ),
             ],
           ),
-          // child: Center(
-          //     child: Text(
-          //   text,
-          //   style: textStyle,
-          // )),
           child: Center(
             child: Row(
               mainAxisSize: MainAxisSize.min,

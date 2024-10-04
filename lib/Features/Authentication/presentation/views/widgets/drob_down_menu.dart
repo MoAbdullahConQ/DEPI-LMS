@@ -4,12 +4,16 @@ import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class DropDownMenu extends StatelessWidget {
-  DropDownMenu({super.key, required this.width, required this.drobDownList, required this.hintText});
+  const DropDownMenu(
+      {super.key,
+      required this.width,
+      required this.drobDownList,
+      required this.hintText});
 
 //  String m='';
   final int width;
   final String hintText;
-  List<DropdownMenuEntry> drobDownList = const [];
+  final List<DropdownMenuEntry> drobDownList;
 
   @override
   Widget build(BuildContext context) {
