@@ -1,5 +1,6 @@
 import 'package:depi_lms/Features/Authentication/presentation/views/login_view.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/register_one_view.dart';
+import 'package:depi_lms/Features/Authentication/presentation/views/register_two_view.dart';
 import 'package:depi_lms/Features/Splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -23,10 +24,10 @@ abstract class AppRouter {
         path: kRegisterOneView,
         builder: (context, state) => const RegisterOneView(),
       ),
-      // GoRoute(
-      //   path: kRegisterTwoView,
-      //   builder: (context, state) => const RegisterTwoView(),
-      // ),
+      GoRoute(
+        path: kRegisterTwoView,
+        builder: (context, state) => const RegisterTwoView(),
+      ),
       // GoRoute(
       //   path: kRegisterThreeView,
       //   builder: (context, state) => const RegisterThreeView(),

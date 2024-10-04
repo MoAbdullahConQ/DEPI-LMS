@@ -1,0 +1,110 @@
+import 'package:depi_lms/Features/Authentication/presentation/views/widgets/custom_button.dart';
+import 'package:depi_lms/Features/Authentication/presentation/views/widgets/custom_text_field.dart';
+import 'package:depi_lms/Features/Authentication/presentation/views/widgets/grediant_background.dart';
+import 'package:depi_lms/Features/Authentication/presentation/views/widgets/logo_image.dart';
+import 'package:depi_lms/constant.dart';
+import 'package:depi_lms/core/utils/styles.dart';
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
+
+class RegisterTwoViewBody extends StatelessWidget {
+  const RegisterTwoViewBody({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GradientBackground(
+      child: Stack(
+        children: [
+          CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.symmetric(vertical: 25),
+                        child: LogoImage(),
+                      ),
+                      const SizedBox(height: 20),
+                      CustomTextFormField(
+                        onChanged: (v) {},
+                        prefixIcon: const Icon(
+                          Icons.email_outlined,
+                          color: kGreen1Color,
+                        ),
+                        labelText: 'Email',
+                        labelStyle: const TextStyle(
+                            color: kGreen1Color, fontWeight: FontWeight.w200),
+                      ),
+                      const SizedBox(height: 13),
+                      CustomTextFormField(
+                        onChanged: (v) {},
+                        prefixIcon: const Icon(
+                          Icons.phone_outlined,
+                          color: kGreen1Color,
+                        ),
+                        labelText: 'Phone Number',
+                        labelStyle: const TextStyle(
+                            color: kGreen1Color, fontWeight: FontWeight.w200),
+                      ),
+                      const SizedBox(height: 13),
+                      CustomTextFormField(
+                        onChanged: (v) {},
+                        prefixIcon: const Icon(
+                          FontAwesomeIcons.linkedin,
+                          color: kGreen1Color,
+                        ),
+                        suffixIcon: const Icon(FontAwesomeIcons.link),
+                        labelText: 'Linked In Link',
+                        labelStyle: const TextStyle(
+                            color: kGreen1Color, fontWeight: FontWeight.w200),
+                      ),
+                      const SizedBox(height: 40),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        child: CustomButton(
+                          onTap: () {
+                            // GoRouter.of(context).push('/');
+                          },
+                          text: 'Upload Photo Image',
+                          backgroundColor: kButton,
+                          textStyle: Styles.textStyle20.copyWith(
+                              color: Colors.white, fontWeight: FontWeight.w200),
+                          icon: const Icon(Icons.add),
+                        ),
+                      ),
+                      const SizedBox(height: 50),
+                      CustomButton(
+                        onTap: () {
+                          // GoRouter.of(context).push('/');
+                        },
+                        text: 'Continue',
+                        backgroundColor: kButton,
+                        textStyle:
+                            Styles.textStyle20.copyWith(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+          Positioned(
+            left: 9,
+            top: 10,
+            child: IconButton(
+                onPressed: () {
+                  GoRouter.of(context).pop();
+                },
+                icon: const Icon(Icons.arrow_back)),
+          ),
+        ],
+      ),
+    );
+  }
+}
