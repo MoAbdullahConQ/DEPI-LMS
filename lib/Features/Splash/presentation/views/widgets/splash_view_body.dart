@@ -53,7 +53,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void initSlidingAnimation() {
     animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 2));
+        AnimationController(vsync: this, duration: const Duration(milliseconds: 1200));
 
     slidingAnimation =
         Tween<Offset>(begin: const Offset(0, 1), end: Offset.zero)
@@ -72,7 +72,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigateToHome() {
-    Future.delayed(const Duration(milliseconds: 2600), () {
+    Future.delayed(const Duration(milliseconds: 1500), () {
       GoRouter.of(context).push(AppRouter.kLoginView);
     });
   }

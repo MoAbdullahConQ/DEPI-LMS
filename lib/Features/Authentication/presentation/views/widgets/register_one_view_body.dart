@@ -17,13 +17,14 @@ class RegisterOneViewBody extends StatelessWidget {
     DropdownMenuEntry(value: 'Female', label: "Female"),
   ];
   final List<DropdownMenuEntry> governmentList = const [
-    DropdownMenuEntry(value: 'Male', label: "Male"),
-    DropdownMenuEntry(value: 'Female', label: "Female"),
-    DropdownMenuEntry(value: 'Female', label: "Female"),
+    DropdownMenuEntry(value: 'Cairo', label: "Cairo"),
+    DropdownMenuEntry(value: 'Qalubia', label: "Qalubia"),
+    DropdownMenuEntry(value: 'Sharquia', label: "Sharquia"),
   ];
   final List<DropdownMenuEntry> cityList = const [
-    DropdownMenuEntry(value: 'Male', label: "Male"),
-    DropdownMenuEntry(value: 'Female', label: "Female"),
+    DropdownMenuEntry(value: 'Cairo', label: "Cairo"),
+    DropdownMenuEntry(value: 'Qalubia', label: "Qalubia"),
+    DropdownMenuEntry(value: 'Sharquia', label: "Sharquia"),
   ];
 
   @override
@@ -98,40 +99,32 @@ class RegisterOneViewBody extends StatelessWidget {
                         color: kGreen1Color,
                       ),
                     ),
-                    const SizedBox(height: 30),
+                    const SizedBox(height: 25),
                   ],
                 ),
               ),
               SliverToBoxAdapter(
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      DropDownMenu(
-                        hintText: 'Gender',
-                        width: 140,
-                        drobDownList: genderList,
-                      ),
-                      const SizedBox(width: 10),
-                      DropDownMenu(
-                        hintText: 'City',
-                        width: 110,
-                        drobDownList: cityList,
-                      ),
-                      const SizedBox(width: 10),
-                      DropDownMenu(
-                        hintText: 'Government',
-                        width: 190,
-                        drobDownList: governmentList,
-                      ),
-                    ],
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    DropDownMenu(
+                      hintText: 'Gender',
+                      width: 150,
+                      drobDownList: genderList,
+                    ),
+                    const SizedBox(width: 10),
+                    DropDownMenu(
+                      hintText: 'Government',
+                      width: 200,
+                      drobDownList: governmentList,
+                    ),
+                  ],
                 ),
               ),
               SliverToBoxAdapter(
                 child: Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 40, horizontal: 0),
+                      const EdgeInsets.symmetric(vertical: 30, horizontal: 0),
                   child: CustomButton(
                     onTap: () {
                       GoRouter.of(context).push(AppRouter.kRegisterTwoView);
