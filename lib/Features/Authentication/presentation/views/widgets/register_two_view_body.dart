@@ -36,34 +36,34 @@ class RegisterTwoViewBody extends StatelessWidget {
                         onChanged: (v) {},
                         prefixIcon: const Icon(
                           Icons.email_outlined,
-                          color: kGreen1Color,
+                          color: kGreenColor,
                         ),
                         labelText: 'Email',
                         labelStyle: const TextStyle(
-                            color: kGreen1Color, fontWeight: FontWeight.w200),
+                            color: kGreenColor, fontWeight: FontWeight.w200),
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
                         onChanged: (v) {},
                         prefixIcon: const Icon(
                           Icons.phone_outlined,
-                          color: kGreen1Color,
+                          color: kGreenColor,
                         ),
                         labelText: 'Phone Number',
                         labelStyle: const TextStyle(
-                            color: kGreen1Color, fontWeight: FontWeight.w200),
+                            color: kGreenColor, fontWeight: FontWeight.w200),
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
                         onChanged: (v) {},
                         prefixIcon: const Icon(
                           FontAwesomeIcons.linkedin,
-                          color: kGreen1Color,
+                          color: kGreenColor,
                         ),
                         suffixIcon: const Icon(FontAwesomeIcons.link),
                         labelText: 'Linked In Link',
                         labelStyle: const TextStyle(
-                            color: kGreen1Color, fontWeight: FontWeight.w200),
+                            color: kGreenColor, fontWeight: FontWeight.w200),
                       ),
                       const SizedBox(height: 40),
                       Padding(
@@ -73,7 +73,7 @@ class RegisterTwoViewBody extends StatelessWidget {
                             // GoRouter.of(context).push('/');
                           },
                           text: 'Upload Photo Image',
-                          backgroundColor: kButton,
+                          backgroundColor: kGreenAccentColor,
                           textStyle: Styles.textStyle20.copyWith(
                               color: Colors.white, fontWeight: FontWeight.w200),
                           icon: const Icon(Icons.add),
@@ -82,10 +82,11 @@ class RegisterTwoViewBody extends StatelessWidget {
                       const SizedBox(height: 50),
                       CustomButton(
                         onTap: () {
-                          GoRouter.of(context).push(AppRouter.kRegisterThreeView);
+                          GoRouter.of(context)
+                              .push(AppRouter.kRegisterThreeView);
                         },
                         text: 'Continue',
-                        backgroundColor: kButton,
+                        backgroundColor: kGreenAccentColor,
                         textStyle:
                             Styles.textStyle20.copyWith(color: Colors.white),
                       ),

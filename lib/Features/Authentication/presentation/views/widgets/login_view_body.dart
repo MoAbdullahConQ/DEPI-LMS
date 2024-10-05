@@ -43,11 +43,11 @@ class LoginViewBody extends StatelessWidget {
               onChanged: (v) {},
               prefixIcon: const Icon(
                 Icons.email_outlined,
-                color: kGreen1Color,
+                color: kGreenColor,
               ),
               labelText: 'Email',
               labelStyle: const TextStyle(
-                  color: kGreen1Color, fontWeight: FontWeight.w200),
+                  color: kGreenColor, fontWeight: FontWeight.w200),
             ),
             const SizedBox(height: 13),
             CustomTextFormField(
@@ -56,12 +56,12 @@ class LoginViewBody extends StatelessWidget {
               },
               prefixIcon: const Icon(
                 Icons.lock_outline,
-                color: kGreen1Color,
+                color: kGreenColor,
               ),
               obscure: true,
               labelText: 'Password',
               labelStyle: const TextStyle(
-                  color: kGreen1Color, fontWeight: FontWeight.w200),
+                  color: kGreenColor, fontWeight: FontWeight.w200),
             ),
             const SizedBox(height: 10),
             Row(
@@ -73,7 +73,7 @@ class LoginViewBody extends StatelessWidget {
                   },
                   child: Text(
                     'Forget Password ..?',
-                    style: Styles.textStyle18
+                    style: Styles.text18StyleW500
                         .copyWith(color: const Color(0xff555555)),
                   ),
                 ),
@@ -82,10 +82,10 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(height: 20),
             CustomButton(
               onTap: () {
-                GoRouter.of(context).push('/');
+                GoRouter.of(context).push(AppRouter.kHomeStudentView);
               },
               text: 'Login',
-              backgroundColor: kButton,
+              backgroundColor: kGreenAccentColor,
               textStyle: Styles.textStyle25.copyWith(color: Colors.white),
             ),
             const SizedBox(height: 25),

@@ -7,7 +7,7 @@ abstract class Styles {
   static final TextStyle textStyle12 = GoogleFonts.poppins(
     fontSize: 12,
     fontWeight: FontWeight.w600,
-    color: kGreen1Color,
+    color: kGreenColor,
   );
 
   static final TextStyle textStyle14 = GoogleFonts.poppins(
@@ -20,24 +20,43 @@ abstract class Styles {
     fontWeight: FontWeight.w400,
   );
 
-  static final TextStyle textStyle18 = GoogleFonts.poppins(
+  static final TextStyle text18StyleW500 = GoogleFonts.poppins(
     fontSize: 18,
     fontWeight: FontWeight.w500,
   );
+  static final TextStyle text18StyleW600 = GoogleFonts.poppins(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+  );
   static final TextStyle textStyle20 = GoogleFonts.poppins(
     fontSize: 20,
-    color: kGreen1Color,
+    color: kText,
     fontWeight: FontWeight.bold,
+  );
+  static final TextStyle text22StyleW600 = GoogleFonts.poppins(
+    fontSize: 22,
+    fontWeight: FontWeight.w600,
+    color: kText,
+  );
+  static final TextStyle textStyle23 = GoogleFonts.poppins(
+    fontSize: 23,
+    fontWeight: FontWeight.bold,
+    color: kText,
   );
   static final TextStyle textStyle25 = GoogleFonts.poppins(
     fontSize: 25,
     fontWeight: FontWeight.bold,
-    color: kGreen1Color,
+    color: kGreenColor,
+  );
+  static final TextStyle text25StyleW800 = GoogleFonts.poppins(
+    fontSize: 25,
+    fontWeight: FontWeight.w800,
+    color: kText,
   );
   static final TextStyle textStyle32 = GoogleFonts.poppins(
     fontSize: 32,
     fontWeight: FontWeight.bold,
-    color: kGreen1Color,
+    color: kGreenColor,
   );
 
   static final TextStyle textStyle45 = GoogleFonts.poppins(

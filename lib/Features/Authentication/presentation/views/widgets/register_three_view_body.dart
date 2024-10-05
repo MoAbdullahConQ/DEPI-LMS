@@ -33,55 +33,55 @@ class RegisterThreeViewBody extends StatelessWidget {
                         onChanged: (v) {},
                         prefixIcon: const Icon(
                           Icons.account_balance_outlined,
-                          color: kGreen1Color,
+                          color: kGreenColor,
                         ),
                         labelText: 'University',
                         labelStyle: const TextStyle(
-                            color: kGreen1Color, fontWeight: FontWeight.w200),
+                            color: kGreenColor, fontWeight: FontWeight.w200),
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
                         onChanged: (v) {},
                         prefixIcon: const Icon(
                           Icons.school_outlined,
-                          color: kGreen1Color,
+                          color: kGreenColor,
                         ),
                         labelText: 'Faculty',
                         labelStyle: const TextStyle(
-                            color: kGreen1Color, fontWeight: FontWeight.w200),
+                            color: kGreenColor, fontWeight: FontWeight.w200),
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
                         onChanged: (v) {},
                         prefixIcon: const Icon(
                           Icons.history_edu_outlined,
-                          color: kGreen1Color,
+                          color: kGreenColor,
                         ),
                         labelText: 'Major',
                         labelStyle: const TextStyle(
-                            color: kGreen1Color, fontWeight: FontWeight.w200),
+                            color: kGreenColor, fontWeight: FontWeight.w200),
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
                         onChanged: (v) {},
                         prefixIcon: const Icon(
                           Icons.workspace_premium_outlined,
-                          color: kGreen1Color,
+                          color: kGreenColor,
                         ),
                         labelText: 'Degree',
                         labelStyle: const TextStyle(
-                            color: kGreen1Color, fontWeight: FontWeight.w200),
+                            color: kGreenColor, fontWeight: FontWeight.w200),
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
                         onChanged: (v) {},
                         prefixIcon: const Icon(
                           Icons.assured_workload_outlined,
-                          color: kGreen1Color,
+                          color: kGreenColor,
                         ),
                         labelText: 'Government Of Training',
                         labelStyle: const TextStyle(
-                            color: kGreen1Color, fontWeight: FontWeight.w200),
+                            color: kGreenColor, fontWeight: FontWeight.w200),
                       ),
                       const SizedBox(height: 50),
                       CustomButton(
@@ -89,7 +89,7 @@ class RegisterThreeViewBody extends StatelessWidget {
                           GoRouter.of(context).push(AppRouter.kLoginView);
                         },
                         text: 'Register',
-                        backgroundColor: kButton,
+                        backgroundColor: kGreenAccentColor,
                         textStyle:
                             Styles.textStyle20.copyWith(color: Colors.white),
                       ),

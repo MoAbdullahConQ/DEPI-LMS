@@ -3,6 +3,7 @@ import 'package:depi_lms/Features/Authentication/presentation/views/register_one
 import 'package:depi_lms/Features/Authentication/presentation/views/register_three_view.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/register_two_view.dart';
 import 'package:depi_lms/Features/Splash/presentation/views/splash_view.dart';
+import 'package:depi_lms/Features/Home/presentation/views/home_student_view.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
@@ -10,6 +11,7 @@ abstract class AppRouter {
   static const kRegisterOneView = '/registerOneView';
   static const kRegisterTwoView = '/registerTwoView';
   static const kRegisterThreeView = '/registerThreeView';
+  static const kHomeStudentView = '/homeStudentView';
 
   static final routers = GoRouter(
     routes: [
@@ -32,6 +34,10 @@ abstract class AppRouter {
       GoRoute(
         path: kRegisterThreeView,
         builder: (context, state) => const RegisterThreeView(),
+      ),
+      GoRoute(
+      path: kHomeStudentView,
+        builder: (context, state) => const HomeStudentView(),
       ),
     ],
   );

@@ -36,7 +36,7 @@ class CustomTextFormField extends StatelessWidget {
         obscureText: obscure!,
         onChanged: onChanged,
         style: const TextStyle(
-            color: kGreen1Color, fontSize: 18, fontWeight: FontWeight.w600),
+            color: kGreenColor, fontSize: 18, fontWeight: FontWeight.w600),
         decoration: InputDecoration(
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,

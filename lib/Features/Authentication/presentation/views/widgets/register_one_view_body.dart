@@ -52,11 +52,11 @@ class RegisterOneViewBody extends StatelessWidget {
                       onChanged: (p0) {},
                       labelText: 'Full name in Arabic',
                       labelStyle:
-                          Styles.textStyle15.copyWith(color: kGreen1Color),
+                          Styles.textStyle15.copyWith(color: kGreenColor),
                       prefixIcon: const Icon(
                         Icons.account_circle_outlined,
                         size: 33,
-                        color: kGreen1Color,
+                        color: kGreenColor,
                       ),
                     ),
                     const SizedBox(height: 13),
@@ -64,11 +64,11 @@ class RegisterOneViewBody extends StatelessWidget {
                       onChanged: (p0) {},
                       labelText: 'Full name in English',
                       labelStyle:
-                          Styles.textStyle15.copyWith(color: kGreen1Color),
+                          Styles.textStyle15.copyWith(color: kGreenColor),
                       prefixIcon: const Icon(
                         Icons.account_circle_outlined,
                         size: 33,
-                        color: kGreen1Color,
+                        color: kGreenColor,
                       ),
                     ),
                     const SizedBox(height: 13),
@@ -76,11 +76,11 @@ class RegisterOneViewBody extends StatelessWidget {
                       onChanged: (p0) {},
                       labelText: 'National ID',
                       labelStyle:
-                          Styles.textStyle15.copyWith(color: kGreen1Color),
+                          Styles.textStyle15.copyWith(color: kGreenColor),
                       prefixIcon: const Icon(
                         Icons.contact_mail_outlined,
                         size: 33,
-                        color: kGreen1Color,
+                        color: kGreenColor,
                       ),
                     ),
                     const SizedBox(height: 13),
@@ -88,15 +88,15 @@ class RegisterOneViewBody extends StatelessWidget {
                       onChanged: (p0) {},
                       labelText: 'Date of birth',
                       labelStyle:
-                          Styles.textStyle15.copyWith(color: kGreen1Color),
+                          Styles.textStyle15.copyWith(color: kGreenColor),
                       prefixIcon: const Icon(
                         Icons.calendar_month_outlined,
                         size: 33,
-                        color: kGreen1Color,
+                        color: kGreenColor,
                       ),
                       suffixIcon: const Icon(
                         Icons.calendar_today_outlined,
-                        color: kGreen1Color,
+                        color: kGreenColor,
                       ),
                     ),
                     const SizedBox(height: 25),
@@ -130,7 +130,7 @@ class RegisterOneViewBody extends StatelessWidget {
                       GoRouter.of(context).push(AppRouter.kRegisterTwoView);
                     },
                     text: 'Continue',
-                    backgroundColor: kButton,
+                    backgroundColor: kGreenAccentColor,
                     textStyle: Styles.textStyle25.copyWith(color: Colors.white),
                   ),
                 ),

@@ -26,12 +26,12 @@ class DropDownMenu extends StatelessWidget {
             // });
           }
         },
-        textStyle: Styles.textStyle18.copyWith(color: Colors.white),
+        textStyle: Styles.text18StyleW500.copyWith(color: Colors.white),
         hintText: hintText,
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
-          hintStyle: Styles.textStyle18.copyWith(color: Colors.white),
-          fillColor: kButton,
+          hintStyle: Styles.text18StyleW500.copyWith(color: Colors.white),
+          fillColor: kGreenAccentColor,
           suffixIconColor: Colors.white,
           contentPadding: const EdgeInsets.symmetric(horizontal: 16),
           constraints: BoxConstraints.tight(const Size.fromHeight(55)),
