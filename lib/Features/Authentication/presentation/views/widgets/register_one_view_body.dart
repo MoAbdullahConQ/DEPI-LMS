@@ -52,7 +52,7 @@ class RegisterOneViewBody extends StatelessWidget {
                       onChanged: (p0) {},
                       labelText: 'Full name in Arabic',
                       labelStyle:
-                          Styles.textStyle15.copyWith(color: kGreenColor),
+                          Styles.text15Stylew400.copyWith(color: kGreenColor),
                       prefixIcon: const Icon(
                         Icons.account_circle_outlined,
                         size: 33,
@@ -64,7 +64,7 @@ class RegisterOneViewBody extends StatelessWidget {
                       onChanged: (p0) {},
                       labelText: 'Full name in English',
                       labelStyle:
-                          Styles.textStyle15.copyWith(color: kGreenColor),
+                          Styles.text15Stylew400.copyWith(color: kGreenColor),
                       prefixIcon: const Icon(
                         Icons.account_circle_outlined,
                         size: 33,
@@ -76,7 +76,7 @@ class RegisterOneViewBody extends StatelessWidget {
                       onChanged: (p0) {},
                       labelText: 'National ID',
                       labelStyle:
-                          Styles.textStyle15.copyWith(color: kGreenColor),
+                          Styles.text15Stylew400.copyWith(color: kGreenColor),
                       prefixIcon: const Icon(
                         Icons.contact_mail_outlined,
                         size: 33,
@@ -88,7 +88,7 @@ class RegisterOneViewBody extends StatelessWidget {
                       onChanged: (p0) {},
                       labelText: 'Date of birth',
                       labelStyle:
-                          Styles.textStyle15.copyWith(color: kGreenColor),
+                          Styles.text15Stylew400.copyWith(color: kGreenColor),
                       prefixIcon: const Icon(
                         Icons.calendar_month_outlined,
                         size: 33,
@@ -111,12 +111,16 @@ class RegisterOneViewBody extends StatelessWidget {
                       hintText: 'Gender',
                       width: 150,
                       drobDownList: genderList,
+                      height: 55,
+                      fillColor: kGreenAccentColor,
                     ),
                     const SizedBox(width: 10),
                     DropDownMenu(
                       hintText: 'Government',
                       width: 200,
                       drobDownList: governmentList,
+                      height: 55,
+                      fillColor: kGreenAccentColor,
                     ),
                   ],
                 ),

@@ -15,9 +15,13 @@ abstract class Styles {
     fontWeight: FontWeight.w500,
   );
 
-  static final TextStyle textStyle15 = GoogleFonts.poppins(
+  static final TextStyle text15Stylew400 = GoogleFonts.poppins(
     fontSize: 15,
     fontWeight: FontWeight.w400,
+  );
+  static final TextStyle text15Stylew600 = GoogleFonts.poppins(
+    fontSize: 15,
+    fontWeight: FontWeight.w600,
   );
 
   static final TextStyle text18StyleW500 = GoogleFonts.poppins(

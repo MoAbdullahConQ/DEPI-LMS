@@ -3,7 +3,7 @@ import 'package:depi_lms/Features/Home/presentation/views/widgets/app_bar_list_t
 import 'package:depi_lms/Features/Home/presentation/views/widgets/attendance_traking.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/complaints.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/date.dart';
-import 'package:depi_lms/Features/Home/presentation/views/widgets/tracking_system.dart';
+import 'package:depi_lms/Features/Home/presentation/views/widgets/student_tracking_system.dart';
 import 'package:flutter/material.dart';
 
 class HomeStudentViewBody extends StatelessWidget {
@@ -42,9 +42,12 @@ class HomeStudentViewBody extends StatelessWidget {
                     SizedBox(height: 15),
                     Date(),
                     SizedBox(height: 15),
-                    TrackingSystem(),
+                    StudentTrackingSystem(),
                     SizedBox(height: 15),
-                    Complaints(),
+                    Complaints(
+                      iconData: Icons.add,
+                      positioned: false,
+                    ),
                     SizedBox(height: 15),
                   ],
                 ),

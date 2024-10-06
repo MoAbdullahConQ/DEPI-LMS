@@ -8,11 +8,20 @@ class DropDownMenu extends StatelessWidget {
       {super.key,
       required this.width,
       required this.drobDownList,
-      required this.hintText});
+      required this.hintText,
+      required this.height,
+      this.fillColor,
+      this.suffixIconColor,
+      this.hintStyle,
+      this.border});
 
 //  String m='';
   final int width;
+  final double height;
   final String hintText;
+  final Color? fillColor, suffixIconColor;
+  final TextStyle? hintStyle;
+  final InputBorder? border;
   final List<DropdownMenuEntry> drobDownList;
 
   @override
@@ -29,17 +38,19 @@ class DropDownMenu extends StatelessWidget {
         textStyle: Styles.text18StyleW500.copyWith(color: Colors.white),
         hintText: hintText,
         inputDecorationTheme: InputDecorationTheme(
-          filled: true,
-          hintStyle: Styles.text18StyleW500.copyWith(color: Colors.white),
-          fillColor: kGreenAccentColor,
-          suffixIconColor: Colors.white,
-          contentPadding: const EdgeInsets.symmetric(horizontal: 16),
-          constraints: BoxConstraints.tight(const Size.fromHeight(55)),
-          disabledBorder: InputBorder.none,
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(11),
-              borderSide: BorderSide.none),
-        ),
+            filled: true,
+            hintStyle:
+                hintStyle, //Styles.text18StyleW500.copyWith(color: Colors.white),
+            fillColor: fillColor,
+            suffixIconColor: suffixIconColor, //Colors.white,
+            contentPadding: const EdgeInsets.symmetric(horizontal: 16),
+            constraints: BoxConstraints.tight(Size.fromHeight(height)),
+            // disabledBorder: InputBorder.none,
+            border: border
+            // OutlineInputBorder(
+            //     borderRadius: BorderRadius.circular(11),
+            //     borderSide: BorderSide.none),
+            ),
         width: width.toDouble(),
         dropdownMenuEntries: drobDownList,
       ),

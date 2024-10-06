@@ -4,8 +4,8 @@ import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
-class TrackingSystem extends StatelessWidget {
-  const TrackingSystem({
+class StudentTrackingSystem extends StatelessWidget {
+  const StudentTrackingSystem({
     super.key,
   });
 
