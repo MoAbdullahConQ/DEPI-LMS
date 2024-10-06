@@ -1,39 +1,35 @@
-import 'package:depi_lms/Features/Authentication/presentation/views/widgets/login_view_body.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/curved_nav_bar.dart';
+import 'package:depi_lms/Features/Home/presentation/views/widgets/home_company_view_body.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/home_ministry_view_body.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/home_student_view_body.dart';
 import 'package:depi_lms/constant.dart';
 import 'package:flutter/material.dart';
 
-class HomeMinistryView extends StatefulWidget {
-  const HomeMinistryView({super.key});
+class HomeCompanyView extends StatefulWidget {
+  const HomeCompanyView({super.key});
 
   @override
-  State<HomeMinistryView> createState() => _HomeStudentViewState();
+  State<HomeCompanyView> createState() => _HomeStudentViewState();
 }
 
-class _HomeStudentViewState extends State<HomeMinistryView> {
+class _HomeStudentViewState extends State<HomeCompanyView> {
   final List<dynamic> viewsList = const [
-    LoginViewBody(),
-    LoginViewBody(),
+    HomeCompanyViewBody(),
     HomeMinistryViewBody(),
-    LoginViewBody(),
     HomeStudentViewBody(),
   ];
 
-  int _currentIndex = 2; // Home is selected by default
+  int _currentIndex = 1; // Home is selected by default
 
   // Update the icons based on the current index
-  List<Widget> itemsMinistryList() {
+  List<Widget> itemsCompanyList() {
     return [
-      const Icon(Icons.format_list_bulleted,
-          color: kGreenAccentColor, size: 30),
-      const Icon(Icons.factory, color: kGreenAccentColor, size: 30),
+      const Icon(Icons.groups_outlined, color: kGreenAccentColor, size: 30),
       Icon(Icons.home_outlined,
           color: kGreenAccentColor,
-          size: _currentIndex == 2 ? 50 : 35), // dynamic size for home icon
-      const Icon(Icons.notification_add, color: kGreenAccentColor, size: 30),
-      const Icon(Icons.settings, color: kGreenAccentColor, size: 30),
+          size: _currentIndex == 1 ? 50 : 35), // dynamic size for home icon
+      const Icon(Icons.format_list_bulleted_outlined,
+          color: kGreenAccentColor, size: 30),
     ];
   }
 
@@ -52,7 +48,7 @@ class _HomeStudentViewState extends State<HomeMinistryView> {
         bottomNavigationBar: CurvedNavBar(
           onTap: onTap,
           currentIndex: _currentIndex,
-          itemsList: itemsMinistryList(),
+          itemsList: itemsCompanyList(),
         ));
   }
 }

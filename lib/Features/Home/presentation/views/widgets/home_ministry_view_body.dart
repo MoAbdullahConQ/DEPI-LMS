@@ -19,7 +19,7 @@ class HomeMinistryViewBody extends StatelessWidget {
                 children: [
                   const SizedBox(height: 30),
                   Image.asset(
-                    AssetsData.logo,
+                    AssetsData.depiLogo,
                     height: 200,
                   ),
                 ],
@@ -29,7 +29,8 @@ class HomeMinistryViewBody extends StatelessWidget {
               const SizedBox(height: 15),
               const Complaints(
                 positioned: true,
-              )
+              ),
+              const SizedBox(height: 25),
             ],
           ),
         ),

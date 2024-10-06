@@ -48,7 +48,7 @@ class HomeStudentViewBody extends StatelessWidget {
                       iconData: Icons.add,
                       positioned: false,
                     ),
-                    SizedBox(height: 15),
+                    SizedBox(height: 25),
                   ],
                 ),
               ),
