@@ -19,36 +19,36 @@ abstract class AppRouter {
 
   static final routers = GoRouter(
     routes: [
-      // GoRoute(
-      //   path: '/',
-      //   builder: (context, state) => const SplashView(),
-      // ),
-      // GoRoute(
-      //   path: kLoginView,
-      //   builder: (context, state) => const LoginView(),
-      // ),
-      // GoRoute(
-      //   path: kRegisterOneView,
-      //   builder: (context, state) => const RegisterOneView(),
-      // ),
-      // GoRoute(
-      //   path: kRegisterTwoView,
-      //   builder: (context, state) => const RegisterTwoView(),
-      // ),
-      // GoRoute(
-      //   path: kRegisterThreeView,
-      //   builder: (context, state) => const RegisterThreeView(),
-      // ),
-      // GoRoute(
-      // path: kHomeStudentView,
-      //   builder: (context, state) => const HomeStudentView(),
-      // ),
-      // GoRoute(
-      // path: kHomeMinistryView,
-      //   builder: (context, state) => const HomeMinistryView(),
-      // ),
       GoRoute(
-      path: '/',
+        path: '/',
+        builder: (context, state) => const SplashView(),
+      ),
+      GoRoute(
+        path: kLoginView,
+        builder: (context, state) => const LoginView(),
+      ),
+      GoRoute(
+        path: kRegisterOneView,
+        builder: (context, state) => const RegisterOneView(),
+      ),
+      GoRoute(
+        path: kRegisterTwoView,
+        builder: (context, state) => const RegisterTwoView(),
+      ),
+      GoRoute(
+        path: kRegisterThreeView,
+        builder: (context, state) => const RegisterThreeView(),
+      ),
+      GoRoute(
+      path: kHomeStudentView,
+        builder: (context, state) => const HomeStudentView(),
+      ),
+      GoRoute(
+      path: kHomeMinistryView,
+        builder: (context, state) => const HomeMinistryView(),
+      ),
+      GoRoute(
+      path: kHomeCompanyView,
         builder: (context, state) => const HomeCompanyView(),
       ),
     ],
