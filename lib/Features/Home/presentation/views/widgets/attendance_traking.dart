@@ -9,7 +9,7 @@ class AttendanceTraking extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomShadow(
-      edgeInsets: const EdgeInsets.symmetric(horizontal: 3, vertical: 7),
+      padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 7),
       color: kWhite,
       borderRadius: BorderRadius.circular(16),
       child: const SingleChildScrollView(

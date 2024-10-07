@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 
 class CustomShadow extends StatelessWidget {
   const CustomShadow(
-      {super.key, required this.child, this.color, this.borderRadius, this.edgeInsets});
+      {super.key, required this.child, this.color, this.borderRadius, this.padding, this.margin});
 
   final Widget child;
   final Color? color;
   final BorderRadius? borderRadius;
-  final EdgeInsets? edgeInsets;
+  final EdgeInsets? padding,margin;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: edgeInsets,
+      margin: margin,
+      padding: padding,
       decoration: BoxDecoration(
         color: color,
         borderRadius: borderRadius,

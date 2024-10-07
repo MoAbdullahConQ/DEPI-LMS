@@ -62,8 +62,12 @@ abstract class Styles {
     fontWeight: FontWeight.bold,
     color: kGreenColor,
   );
+  static final TextStyle text32StyleW400 = GoogleFonts.poppins(
+    fontSize: 32,
+    fontWeight: FontWeight.w400,
+  );
 
-  static final TextStyle textStyle45 = GoogleFonts.poppins(
+  static final TextStyle text45StyleW600 = GoogleFonts.poppins(
     fontSize: 45,
     fontWeight: FontWeight.w600,
     color: kSplashColor,

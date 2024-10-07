@@ -5,14 +5,19 @@ class CustomButton extends StatelessWidget {
       {super.key,
       this.onTap,
       this.textStyle,
-      this.icon,
       this.backgroundColor,
-      required this.text});
+      required this.text,
+      this.borderRadius,
+      this.border,
+      this.leading,
+      this.treling});
 
   final String text;
   final TextStyle? textStyle;
   final Color? backgroundColor;
-  final Icon? icon;
+  final IconData? leading, treling;
+  final BorderRadiusGeometry? borderRadius;
+  final BoxBorder? border;
   final VoidCallback? onTap;
 
   @override
@@ -23,14 +28,14 @@ class CustomButton extends StatelessWidget {
           width: double.infinity,
           height: 60,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: borderRadius,
             color: backgroundColor,
-            border: Border.all(color: Colors.white),
+            border: border,
             boxShadow: const [
               BoxShadow(
                 color: Colors.grey,
                 blurRadius: 4,
-                offset: Offset(0, 4), // Shadow position
+                offset: Offset(0, 3), // Shadow position
               ),
             ],
           ),
@@ -38,14 +43,20 @@ class CustomButton extends StatelessWidget {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
+                if (leading != null)
+                  Icon(
+                    leading,
+                    color: Colors.black,
+                  ),
+                const SizedBox(width: 10),
                 Text(
                   text,
                   style: textStyle,
                 ),
                 const SizedBox(width: 10),
-                if (icon != null)
+                if (treling != null)
                   Icon(
-                    icon!.icon,
+                    treling,
                     color: Colors.white,
                   ),
               ],

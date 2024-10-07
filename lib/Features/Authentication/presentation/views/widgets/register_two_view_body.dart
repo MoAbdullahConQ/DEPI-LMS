@@ -76,7 +76,7 @@ class RegisterTwoViewBody extends StatelessWidget {
                           backgroundColor: kGreenAccentColor,
                           textStyle: Styles.textStyle20.copyWith(
                               color: Colors.white, fontWeight: FontWeight.w200),
-                          icon: const Icon(Icons.add),
+                          treling: Icons.add,
                         ),
                       ),
                       const SizedBox(height: 50),
@@ -89,6 +89,8 @@ class RegisterTwoViewBody extends StatelessWidget {
                         backgroundColor: kGreenAccentColor,
                         textStyle:
                             Styles.textStyle20.copyWith(color: Colors.white),
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(15),
                       ),
                     ],
                   ),

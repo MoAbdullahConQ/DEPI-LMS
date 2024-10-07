@@ -14,7 +14,7 @@ class StudentTrackingSystem extends StatelessWidget {
     return CustomShadow(
       color: kWhite,
       borderRadius: BorderRadius.circular(16),
-      edgeInsets: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
       child: Row(
         // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -70,4 +70,3 @@ class StudentTrackingSystem extends StatelessWidget {
     );
   }
 }
-

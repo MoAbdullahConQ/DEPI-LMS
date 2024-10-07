@@ -16,7 +16,7 @@ class SlidingText extends StatelessWidget {
             child: Text(
               'DEPI LMS',
               textAlign: TextAlign.center,
-              style: Styles.textStyle45,
+              style: Styles.text45StyleW600,
             ),
           );
         });

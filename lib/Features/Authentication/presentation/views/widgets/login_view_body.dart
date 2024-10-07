@@ -87,6 +87,8 @@ class LoginViewBody extends StatelessWidget {
               text: 'Login',
               backgroundColor: kGreenAccentColor,
               textStyle: Styles.textStyle25.copyWith(color: Colors.white),
+              border: Border.all(color: Colors.white),
+              borderRadius: BorderRadius.circular(15),
             ),
             const SizedBox(height: 25),
             Row(

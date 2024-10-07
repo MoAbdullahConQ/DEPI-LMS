@@ -21,7 +21,7 @@ class AppBarListTile extends StatelessWidget {
     return CustomShadow(
       color: kGreenAccentColor,
       borderRadius: BorderRadius.circular(22),
-      edgeInsets: edgeInsets,
+      padding: edgeInsets,
       child: ListTile(
         leading: leading,
         title: Text(

@@ -17,7 +17,7 @@ class Complaints extends StatelessWidget {
         CustomShadow(
           color: kWhite,
           borderRadius: BorderRadius.circular(16),
-          edgeInsets: const EdgeInsets.symmetric(horizontal: 7),
+          padding: const EdgeInsets.symmetric(horizontal: 7),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -74,7 +74,7 @@ class Complaints extends StatelessWidget {
             height: 25,
             width: 25,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
+                shape: BoxShape.circle,
                 color: positioned == true ? Colors.blue : Colors.transparent),
           ),
         )

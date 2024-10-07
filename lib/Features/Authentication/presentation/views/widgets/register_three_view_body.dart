@@ -92,6 +92,8 @@ class RegisterThreeViewBody extends StatelessWidget {
                         backgroundColor: kGreenAccentColor,
                         textStyle:
                             Styles.textStyle20.copyWith(color: Colors.white),
+                    border: Border.all(color: Colors.white),
+              borderRadius: BorderRadius.circular(15),
                       ),
                     ],
                   ),

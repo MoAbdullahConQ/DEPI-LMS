@@ -2,6 +2,8 @@ import 'package:depi_lms/Features/Home/presentation/views/widgets/curved_nav_bar
 import 'package:depi_lms/Features/Home/presentation/views/widgets/home_company_view_body.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/home_ministry_view_body.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/home_student_view_body.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/tasks_student_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/widgets/tasks_student_view_body.dart';
 import 'package:depi_lms/constant.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +18,7 @@ class _HomeStudentViewState extends State<HomeCompanyView> {
   final List<dynamic> viewsList = const [
     HomeCompanyViewBody(),
     HomeMinistryViewBody(),
-    HomeStudentViewBody(),
+    TasksStudentView(),
   ];
 
   int _currentIndex = 1; // Home is selected by default

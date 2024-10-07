@@ -136,6 +136,8 @@ class RegisterOneViewBody extends StatelessWidget {
                     text: 'Continue',
                     backgroundColor: kGreenAccentColor,
                     textStyle: Styles.textStyle25.copyWith(color: Colors.white),
+                  border: Border.all(color: Colors.white),
+              borderRadius: BorderRadius.circular(15),
                   ),
                 ),
               )
