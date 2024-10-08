@@ -24,10 +24,12 @@ abstract class AppRouter {
   static const kRegisterTwoView = '/registerTwoView';
   static const kRegisterThreeView = '/registerThreeView';
 
+//Home Feature
   static const kHomeStudentView = '/homeStudentView';
   static const kHomeMinistryView = '/homeMinistryView';
   static const kHomeCompanyView = '/homeCompanyView';
 
+//Tasks Feature
   static const kTasksStudentView = '/tasksStudentView';
   static const kTasksDoneView = '/tasksDoneView';
   static const kDetailsTasksStudentView = '/detailsTasksStudentView';
@@ -68,19 +70,22 @@ abstract class AppRouter {
       //   builder: (context, state) => const RegisterThreeView(),
       // ),
 
-      // GoRoute(
-      // path: kHomeStudentView,
-      //   builder: (context, state) => const HomeStudentView(),
-      // ),
-      // GoRoute(
-      // path: kHomeMinistryView,
-      //   builder: (context, state) => const HomeMinistryView(),
-      // ),
+//Home Feature
+      GoRoute(
+      path: kHomeStudentView,
+        builder: (context, state) => const HomeStudentView(),
+      ),
+      GoRoute(
+      path: kHomeMinistryView,
+        builder: (context, state) => const HomeMinistryView(),
+      ),
       GoRoute(
         path: '/',
         builder: (context, state) => const HomeCompanyView(),
       ),
 
+
+//Tasks Feature
       GoRoute(
         path: kTasksStudentView,
         builder: (context, state) => const TasksStudentView(),
