@@ -10,4 +10,8 @@ class AssetsData {
   static const freelancePic = 'assets/images/telecommuting_img.png';
 
   static const strengthPic = 'assets/images/strength.png';
+  static const assignmentPic = 'assets/images/assignment_img.png';
+  
+  static const pdfPic = 'assets/images/file 1.png';
+  static const ziptPic = 'assets/images/zip 1.png';
 }

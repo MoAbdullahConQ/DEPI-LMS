@@ -1,21 +1,23 @@
-// ignore_for_file: prefer_const_constructors, library_private_types_in_public_api, prefer_const_constructors_in_immutables, use_key_in_widget_constructors
-
-import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'sub_task_card.dart';
 
 class TaskCard extends StatefulWidget {
-  final String title;
-  final String assetImage;
-  final List<SubTaskCard> subTasks;
-  final VoidCallback onTap;
-
-  TaskCard({
+  const TaskCard({
+    super.key,
     required this.title,
     required this.assetImage,
-    required this.subTasks,
+    this.subTasks,
     required this.onTap,
+    this.trailing,
+    this.textStyle,
   });
+
+  final String title;
+  final String assetImage;
+  final List<SubTaskCard>? subTasks;
+  final VoidCallback onTap;
+  final bool? trailing;
+  final TextStyle? textStyle;
 
   @override
   _TaskCardState createState() => _TaskCardState();
@@ -29,13 +31,14 @@ class _TaskCardState extends State<TaskCard> {
     return Card(
       shadowColor: Colors.black,
       elevation: 7,
-      margin: EdgeInsets.symmetric(vertical: 8),
+      margin: const EdgeInsets.symmetric(vertical: 8),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       child: Column(
         children: [
           ListTile(
             onTap: widget.onTap,
-            contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
             leading: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -44,8 +47,8 @@ class _TaskCardState extends State<TaskCard> {
                   width: 60,
                   height: 60,
                 ),
-                SizedBox(width: 15),
-                VerticalDivider(
+                const SizedBox(width: 15),
+                const VerticalDivider(
                   color: Colors.black54,
                   thickness: 1,
                   width: 9,
@@ -54,21 +57,26 @@ class _TaskCardState extends State<TaskCard> {
                 ),
               ],
             ),
-            title: Text(widget.title, style: Styles.text32StyleW400),
-            trailing: IconButton(
-              icon: Icon(isExpanded
-                  ? Icons.keyboard_arrow_up
-                  : Icons.keyboard_arrow_down),
-              onPressed: () {
-                setState(() {
-                  isExpanded = !isExpanded;
-                });
-              },
+            title: Text(
+              widget.title,
+              style: widget.textStyle,
             ),
+            trailing: widget.trailing == true
+                ? IconButton(
+                    icon: Icon(isExpanded
+                        ? Icons.keyboard_arrow_up
+                        : Icons.keyboard_arrow_down),
+                    onPressed: () {
+                      setState(() {
+                        isExpanded = !isExpanded;
+                      });
+                    },
+                  )
+                : null,
           ),
-          if (isExpanded)
+          if (isExpanded && widget.subTasks != null)
             Column(
-              children: widget.subTasks,
+              children: widget.subTasks!,
             ),
         ],
       ),

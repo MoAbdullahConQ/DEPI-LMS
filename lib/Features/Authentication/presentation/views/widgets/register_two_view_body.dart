@@ -40,7 +40,7 @@ class RegisterTwoViewBody extends StatelessWidget {
                         ),
                         labelText: 'Email',
                         labelStyle: const TextStyle(
-                            color: kGreenColor, fontWeight: FontWeight.w200),
+                            color: kGreenColor, fontWeight: FontWeight.w200), fillColor: kGrey,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -51,7 +51,7 @@ class RegisterTwoViewBody extends StatelessWidget {
                         ),
                         labelText: 'Phone Number',
                         labelStyle: const TextStyle(
-                            color: kGreenColor, fontWeight: FontWeight.w200),
+                            color: kGreenColor, fontWeight: FontWeight.w200), fillColor: kGrey,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -63,7 +63,7 @@ class RegisterTwoViewBody extends StatelessWidget {
                         suffixIcon: const Icon(FontAwesomeIcons.link),
                         labelText: 'Linked In Link',
                         labelStyle: const TextStyle(
-                            color: kGreenColor, fontWeight: FontWeight.w200),
+                            color: kGreenColor, fontWeight: FontWeight.w200), fillColor: kGrey,
                       ),
                       const SizedBox(height: 40),
                       Padding(

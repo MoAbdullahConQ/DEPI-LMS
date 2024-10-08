@@ -8,6 +8,12 @@ import 'package:depi_lms/Features/Splash/presentation/views/splash_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/home_student_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/attached_tasks_files_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/details_tasks_student_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/received_tasks_group_track_company_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/review_details_student_tasks_group_track_company_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/review_student_tasks_group_track_company_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/select_student_tasks_group_track_company_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/sending_receiveing_tasks_group_track_company_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/sending_tasks_group_track_company_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/tasks_done_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/tasks_student_view.dart';
 import 'package:go_router/go_router.dart';
@@ -26,6 +32,18 @@ abstract class AppRouter {
   static const kTasksDoneView = '/tasksDoneView';
   static const kDetailsTasksStudentView = '/detailsTasksStudentView';
   static const kAttachedTasksFilesView = '/attachedTasksFilesView';
+  static const kSendingReceiveingTasksGroupTrackCompanyView =
+      '/sendingReceiveingTasksGroupTrackCompanyView';
+  static const kSendingTasksGroupTrackCompanyView =
+      '/sendingTasksGroupTrackCompanyView';
+  static const kSelectStudentTasksGroupTrackCompanyView =
+      '/selectStudentTasksGroupTrackCompanyView';
+  static const kReceivedTasksGroupTrackCompanyView =
+      '/receivedTasksGroupTrackCompanyView';
+  static const kReviewStudentTasksGroupTrackCompanyView =
+      '/reviewStudentTasksGroupTrackCompanyView';
+  static const kReviewDetailsStudentTasksGroupTrackCompanyView =
+      '/reviewDetailsStudentTasksGroupTrackCompanyView';
 
   static final routers = GoRouter(
     routes: [
@@ -95,10 +113,43 @@ abstract class AppRouter {
           path: kAttachedTasksFilesView,
           builder: (context, state) {
             final taskName = state.uri.queryParameters['taskName'];
-            
+
             return AttachedTasksFilesView(
               taskName: taskName ?? '',
             );
+          }),
+      GoRoute(
+          path: kSendingReceiveingTasksGroupTrackCompanyView,
+          builder: (context, state) {
+            return const SendingReceiveingTasksGroupTrackCompanyView();
+          }),
+      GoRoute(
+          path: kSendingTasksGroupTrackCompanyView,
+          builder: (context, state) {
+            return const SendingTasksGroupTrackCompanyView();
+          }),
+      GoRoute(
+          path: kSelectStudentTasksGroupTrackCompanyView,
+          builder: (context, state) {
+            return const SelectStudentTasksGroupTrackCompanyView();
+          }),
+      GoRoute(
+          path: kReceivedTasksGroupTrackCompanyView,
+          builder: (context, state) {
+            return const ReceivedTasksGroupTrackCompanyView();
+          }),
+      GoRoute(
+          path: kReviewStudentTasksGroupTrackCompanyView,
+          builder: (context, state) {
+            final taskName = state.uri.queryParameters['taskName'];
+
+            return ReviewStudentTasksGroupTrackCompanyView(
+                taskName: taskName ?? '');
+          }),
+      GoRoute(
+          path: kReviewDetailsStudentTasksGroupTrackCompanyView,
+          builder: (context, state) {
+            return const ReviewDetailsStudentTasksGroupTrackCompanyView();
           }),
     ],
   );

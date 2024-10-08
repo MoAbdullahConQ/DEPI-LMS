@@ -1,16 +1,16 @@
 import 'package:depi_lms/Features/Authentication/presentation/views/widgets/grediant_background.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/app_bar_list_tile.dart';
-
 import 'package:depi_lms/Features/Tasks/presentation/views/widgets/sub_task_card.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/widgets/task_card.dart';
+import 'package:depi_lms/constant.dart';
 import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:depi_lms/core/utils/assets.dart';
 import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class TasksStudentViewBody extends StatelessWidget {
-  const TasksStudentViewBody({super.key});
+class ReceivedTasksGroupTrackCompanyViewBody extends StatelessWidget {
+  const ReceivedTasksGroupTrackCompanyViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,26 +21,20 @@ class TasksStudentViewBody extends StatelessWidget {
           children: [
             // const SizedBox(height: 15),
             AppBarListTile(
-              title: 'Tasks',
+              title: 'Received Task',
               edgeInsets: const EdgeInsets.symmetric(vertical: 7),
-              leading: GestureDetector(
-                onTap: () {},
-                child: SizedBox(
-                  height: 60,
-                  width: 60,
-                  child: CircleAvatar(
-                    backgroundColor: Colors.white,
-                    child: Image.asset(
-                      'assets/images/Profile Pic.png',
-                    ),
-                  ),
-                ),
-              ),
+              leading: IconButton(
+                  onPressed: () {
+                    GoRouter.of(context).pop();
+                  },
+                  icon: const Icon(
+                    Icons.arrow_back,
+                    color: kWhite,
+                  )),
             ),
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
-                  // padding: EdgeInsets.only(top: 120, right: 10, left: 10),
                   children: [
                     const SizedBox(height: 5),
                     TaskCard(
@@ -50,19 +44,21 @@ class TasksStudentViewBody extends StatelessWidget {
                       trailing: true,
                       subTasks: const [
                         SubTaskCard(
-                            title: "Task 14",
-                            date: "27/9/2024",
-                            goRouterLink:
-                                '${AppRouter.kSelectStudentTasksGroupTrackCompanyView}?taskName=Task 14&startDate=20/8/2024&deadline=27/8/2024'),
+                          title: "Task 14",
+                          date: "27/9/2024",
+                          goRouterLink:
+                              '${AppRouter.kReviewStudentTasksGroupTrackCompanyView}?taskName=Task 14',
+                        ),
                         SubTaskCard(
-                            title: "Task 13",
-                            date: "25/9/2024",
-                            goRouterLink:
-                                '${AppRouter.kSelectStudentTasksGroupTrackCompanyView}?taskName=Task 13&startDate=20/8/2024&deadline=27/8/2024'),
+                          title: "Task 13",
+                          date: "25/9/2024",
+                          goRouterLink:
+                              '${AppRouter.kReviewStudentTasksGroupTrackCompanyView}?taskName=Task 13',
+                        ),
                       ],
                       onTap: () {
                         GoRouter.of(context).push(
-                            '${AppRouter.kTasksDoneView}?itemCount=11&titleAppBar=Technical');
+                            '${AppRouter.kTasksDoneView}?itemCount=12&titleAppBar=Technical');
                       },
                     ),
                     TaskCard(
@@ -72,10 +68,16 @@ class TasksStudentViewBody extends StatelessWidget {
                       trailing: true,
                       subTasks: const [
                         SubTaskCard(
-                          title: "Task 4",
-                          date: "20/9/2024",
+                          title: "Task 3",
+                          date: "27/9/2024",
                           goRouterLink:
-                              '${AppRouter.kSelectStudentTasksGroupTrackCompanyView}?taskName=Task 4&startDate=20/8/2024&deadline=27/8/2024',
+                              '${AppRouter.kReviewStudentTasksGroupTrackCompanyView}?taskName=Task 3',
+                        ),
+                        SubTaskCard(
+                          title: "Task 2",
+                          date: "25/9/2024",
+                          goRouterLink:
+                              '${AppRouter.kReviewStudentTasksGroupTrackCompanyView}?taskName=Task 2',
                         ),
                       ],
                       onTap: () {
@@ -90,10 +92,17 @@ class TasksStudentViewBody extends StatelessWidget {
                       trailing: true,
                       subTasks: const [
                         SubTaskCard(
-                            title: "Task 6",
-                            date: "19/9/2024",
-                            goRouterLink:
-                                '${AppRouter.kSelectStudentTasksGroupTrackCompanyView}?taskName=Task 6&startDate=20/8/2024&deadline=27/8/2024'),
+                          title: "Task 2",
+                          date: "27/9/2024",
+                          goRouterLink:
+                              '${AppRouter.kReviewStudentTasksGroupTrackCompanyView}?taskName=Task 2',
+                        ),
+                        SubTaskCard(
+                          title: "Task 1",
+                          date: "25/9/2024",
+                          goRouterLink:
+                              '${AppRouter.kReviewStudentTasksGroupTrackCompanyView}?taskName=Task 1',
+                        ),
                       ],
                       onTap: () {
                         GoRouter.of(context).push(
@@ -107,10 +116,11 @@ class TasksStudentViewBody extends StatelessWidget {
                       trailing: true,
                       subTasks: const [
                         SubTaskCard(
-                            title: "Task 1",
-                            date: "15/9/2024",
-                            goRouterLink:
-                                '${AppRouter.kSelectStudentTasksGroupTrackCompanyView}?taskName=Task 1&startDate=20/8/2024&deadline=27/8/2024'),
+                          title: "Task 1",
+                          date: "27/9/2024",
+                          goRouterLink:
+                              '${AppRouter.kReviewStudentTasksGroupTrackCompanyView}?taskName=Task 1',
+                        ),
                       ],
                       onTap: () {
                         GoRouter.of(context).push(

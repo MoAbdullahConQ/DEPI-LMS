@@ -1,20 +1,23 @@
 import 'package:depi_lms/constant.dart';
-import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class SubTaskCard extends StatelessWidget {
-  const SubTaskCard({super.key, required this.title, required this.date});
+  const SubTaskCard(
+      {super.key,
+      required this.title,
+      required this.date,
+      required this.goRouterLink});
 
   final String title;
   final String date;
+  final String goRouterLink;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        GoRouter.of(context).push(
-            '${AppRouter.kDetailsTasksStudentView}?taskName=Task14&startDate=20/8/2024&deadline=27/8/2024');
+        GoRouter.of(context).push(goRouterLink);
       },
       child: Card(
         elevation: 5,
@@ -27,7 +30,7 @@ class SubTaskCard extends StatelessWidget {
               child: Center(
                 child: Text(
                   title,
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.normal),
+                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.normal),
                 ),
               ),
             ),

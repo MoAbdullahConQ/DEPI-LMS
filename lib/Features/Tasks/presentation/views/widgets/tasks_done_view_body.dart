@@ -2,7 +2,6 @@ import 'package:depi_lms/Features/Authentication/presentation/views/widgets/gred
 import 'package:depi_lms/Features/Home/presentation/views/widgets/app_bar_list_tile.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/widgets/task_card_done.dart';
 import 'package:depi_lms/constant.dart';
-import 'package:depi_lms/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -39,7 +38,7 @@ class TasksDoneViewBody extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return TaskCardDone(
                     title: "Task${itemCount - index}",
-                    assetImage: AssetsData.strengthPic,
+                    assetImage:'assets/images/assignment_img.png',
                   );
                 },
               ),

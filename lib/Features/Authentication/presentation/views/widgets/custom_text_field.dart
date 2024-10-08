@@ -11,6 +11,11 @@ class CustomTextFormField extends StatelessWidget {
     this.labelStyle,
     required this.labelText,
     this.obscure = false,
+     this.fillColor,
+    this.color,
+    this.borderRadius,
+    this.margin,
+    this.padding,
   });
 
   // String? hintText;
@@ -23,6 +28,11 @@ class CustomTextFormField extends StatelessWidget {
 
   final Icon? prefixIcon, suffixIcon;
 
+  final Color? fillColor, color;
+  final BorderRadius? borderRadius;
+
+  final EdgeInsets? margin, padding;
+
   @override
   Widget build(BuildContext context) {
     // Material(
@@ -32,6 +42,10 @@ class CustomTextFormField extends StatelessWidget {
     // shadowColor: Colors.grey,
     // child:
     return CustomShadow(
+      borderRadius: borderRadius,
+      margin: margin,
+      padding: padding,
+      color: color,
       child: TextFormField(
         obscureText: obscure!,
         onChanged: onChanged,
@@ -45,7 +59,7 @@ class CustomTextFormField extends StatelessWidget {
           labelText: labelText,
           labelStyle: labelStyle,
           filled: true,
-          fillColor: const Color(0xffECEFF1),
+          fillColor: fillColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(9),
             borderSide: const BorderSide(color: Color(0xffECEFF1)),

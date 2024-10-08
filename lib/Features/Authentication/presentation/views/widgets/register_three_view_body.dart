@@ -38,6 +38,7 @@ class RegisterThreeViewBody extends StatelessWidget {
                         labelText: 'University',
                         labelStyle: const TextStyle(
                             color: kGreenColor, fontWeight: FontWeight.w200),
+                        fillColor: kGrey,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -49,6 +50,7 @@ class RegisterThreeViewBody extends StatelessWidget {
                         labelText: 'Faculty',
                         labelStyle: const TextStyle(
                             color: kGreenColor, fontWeight: FontWeight.w200),
+                        fillColor: kGrey,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -60,6 +62,7 @@ class RegisterThreeViewBody extends StatelessWidget {
                         labelText: 'Major',
                         labelStyle: const TextStyle(
                             color: kGreenColor, fontWeight: FontWeight.w200),
+                        fillColor: kGrey,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -71,6 +74,7 @@ class RegisterThreeViewBody extends StatelessWidget {
                         labelText: 'Degree',
                         labelStyle: const TextStyle(
                             color: kGreenColor, fontWeight: FontWeight.w200),
+                        fillColor: kGrey,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -82,6 +86,7 @@ class RegisterThreeViewBody extends StatelessWidget {
                         labelText: 'Government Of Training',
                         labelStyle: const TextStyle(
                             color: kGreenColor, fontWeight: FontWeight.w200),
+                        fillColor: kGrey,
                       ),
                       const SizedBox(height: 50),
                       CustomButton(
@@ -92,8 +97,8 @@ class RegisterThreeViewBody extends StatelessWidget {
                         backgroundColor: kGreenAccentColor,
                         textStyle:
                             Styles.textStyle20.copyWith(color: Colors.white),
-                    border: Border.all(color: Colors.white),
-              borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(15),
                       ),
                     ],
                   ),

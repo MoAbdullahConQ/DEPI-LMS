@@ -58,6 +58,7 @@ class RegisterOneViewBody extends StatelessWidget {
                         size: 33,
                         color: kGreenColor,
                       ),
+                      fillColor: kGrey,
                     ),
                     const SizedBox(height: 13),
                     CustomTextFormField(
@@ -69,7 +70,7 @@ class RegisterOneViewBody extends StatelessWidget {
                         Icons.account_circle_outlined,
                         size: 33,
                         color: kGreenColor,
-                      ),
+                      ), fillColor: kGrey,
                     ),
                     const SizedBox(height: 13),
                     CustomTextFormField(
@@ -81,7 +82,7 @@ class RegisterOneViewBody extends StatelessWidget {
                         Icons.contact_mail_outlined,
                         size: 33,
                         color: kGreenColor,
-                      ),
+                      ), fillColor: kGrey,
                     ),
                     const SizedBox(height: 13),
                     CustomTextFormField(
@@ -97,7 +98,7 @@ class RegisterOneViewBody extends StatelessWidget {
                       suffixIcon: const Icon(
                         Icons.calendar_today_outlined,
                         color: kGreenColor,
-                      ),
+                      ), fillColor: kGrey,
                     ),
                     const SizedBox(height: 25),
                   ],
@@ -136,8 +137,8 @@ class RegisterOneViewBody extends StatelessWidget {
                     text: 'Continue',
                     backgroundColor: kGreenAccentColor,
                     textStyle: Styles.textStyle25.copyWith(color: Colors.white),
-                  border: Border.all(color: Colors.white),
-              borderRadius: BorderRadius.circular(15),
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(15),
                   ),
                 ),
               )

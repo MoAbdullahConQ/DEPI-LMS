@@ -48,6 +48,7 @@ class LoginViewBody extends StatelessWidget {
               labelText: 'Email',
               labelStyle: const TextStyle(
                   color: kGreenColor, fontWeight: FontWeight.w200),
+              fillColor: kGrey.shade300,
             ),
             const SizedBox(height: 13),
             CustomTextFormField(
@@ -62,6 +63,7 @@ class LoginViewBody extends StatelessWidget {
               labelText: 'Password',
               labelStyle: const TextStyle(
                   color: kGreenColor, fontWeight: FontWeight.w200),
+              fillColor: kGrey.shade300,
             ),
             const SizedBox(height: 10),
             Row(
