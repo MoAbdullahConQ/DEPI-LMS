@@ -1,11 +1,7 @@
 import 'package:depi_lms/Features/Home/presentation/views/widgets/curved_nav_bar.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/home_company_view_body.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/home_ministry_view_body.dart';
-import 'package:depi_lms/Features/Home/presentation/views/widgets/home_student_view_body.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/sending_receiveing_tasks_group_track_company_view.dart';
-import 'package:depi_lms/Features/Tasks/presentation/views/sending_tasks_group_track_company_view.dart';
-import 'package:depi_lms/Features/Tasks/presentation/views/tasks_student_view.dart';
-import 'package:depi_lms/Features/Tasks/presentation/views/widgets/tasks_student_view_body.dart';
 import 'package:depi_lms/constant.dart';
 import 'package:flutter/material.dart';
 
@@ -18,9 +14,8 @@ class HomeCompanyView extends StatefulWidget {
 
 class _HomeStudentViewState extends State<HomeCompanyView> {
   final List<dynamic> viewsList = const [
-    HomeCompanyViewBody(),
     HomeMinistryViewBody(),
-    // TasksStudentView(),
+    HomeCompanyViewBody(),
     SendingReceiveingTasksGroupTrackCompanyView()
   ];
 

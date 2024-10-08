@@ -1,7 +1,10 @@
+import 'package:depi_lms/Features/Authentication/presentation/views/widgets/custom_button.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/widgets/custom_shadow.dart';
 import 'package:depi_lms/constant.dart';
+import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class AppBarListTile extends StatelessWidget {
   const AppBarListTile({
@@ -10,11 +13,14 @@ class AppBarListTile extends StatelessWidget {
     this.subTitle,
     this.leading,
     this.edgeInsets,
+    this.bill,
+    this.addCompany,
   });
 
   final Widget? leading;
   final String? title, subTitle;
   final EdgeInsets? edgeInsets;
+  final bool? bill, addCompany;
 
   @override
   Widget build(BuildContext context) {
@@ -34,13 +40,8 @@ class AppBarListTile extends StatelessWidget {
                 style: Styles.textStyle25.copyWith(color: kWhite),
               )
             : null, // Render nothing if subTitle is null
-        trailing: IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.notifications_none,
-              color: kWhite,
-              size: 40,
-            )),
+        trailing: trailing(context, bill, addCompany),
+
         shape: RoundedRectangleBorder(
           // side: BorderSide(color: Colors.black, width: 2),
           borderRadius: BorderRadius.circular(22),
@@ -50,5 +51,33 @@ class AppBarListTile extends StatelessWidget {
         tileColor: kGreenAccentColor,
       ),
     );
+  }
+
+  Widget? trailing(BuildContext context, bool? bill, bool? addCompany) {
+    if (bill == true) {
+      return IconButton(
+        onPressed: () {},
+        icon: const Icon(
+          Icons.notifications_none,
+          color: kWhite,
+          size: 40,
+        ),
+      );
+    } else if (addCompany == true) {
+      return SizedBox(
+          width: 80,
+          height: 40,
+          child: CustomButton(
+            text: 'Add',
+            textStyle: Styles.text15Stylew600,
+            onTap: () {
+              GoRouter.of(context).push(AppRouter.kAddCompanyToMinistryView);
+            },
+            backgroundColor: kWhite,
+            borderRadius: BorderRadius.circular(16),
+            leading: Icons.add,
+          ));
+    }
+    return null;
   }
 }

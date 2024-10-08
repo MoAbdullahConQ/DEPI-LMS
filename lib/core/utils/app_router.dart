@@ -2,6 +2,8 @@ import 'package:depi_lms/Features/Authentication/presentation/views/login_view.d
 import 'package:depi_lms/Features/Authentication/presentation/views/register_one_view.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/register_three_view.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/register_two_view.dart';
+import 'package:depi_lms/Features/CompanyManagementMinistry/presentation/views/add_company_to_ministry_view.dart';
+import 'package:depi_lms/Features/CompanyManagementMinistry/presentation/views/companies_ministry_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/home_company_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/home_ministry_view.dart';
 import 'package:depi_lms/Features/Splash/presentation/views/splash_view.dart';
@@ -47,6 +49,11 @@ abstract class AppRouter {
   static const kReviewDetailsStudentTasksGroupTrackCompanyView =
       '/reviewDetailsStudentTasksGroupTrackCompanyView';
 
+//
+  static const kCompaniesMinistryView = '/companiesMinistryView';
+
+  static const kAddCompanyToMinistryView = '/addCompanyToMinistryView';
+
   static final routers = GoRouter(
     routes: [
       // GoRoute(
@@ -72,18 +79,17 @@ abstract class AppRouter {
 
 //Home Feature
       GoRoute(
-      path: kHomeStudentView,
+        path: kHomeStudentView,
         builder: (context, state) => const HomeStudentView(),
       ),
       GoRoute(
-      path: kHomeMinistryView,
+        path: '/',
         builder: (context, state) => const HomeMinistryView(),
       ),
       GoRoute(
-        path: '/',
+        path: kHomeCompanyView,
         builder: (context, state) => const HomeCompanyView(),
       ),
-
 
 //Tasks Feature
       GoRoute(
@@ -155,6 +161,18 @@ abstract class AppRouter {
           path: kReviewDetailsStudentTasksGroupTrackCompanyView,
           builder: (context, state) {
             return const ReviewDetailsStudentTasksGroupTrackCompanyView();
+          }),
+
+//
+      GoRoute(
+          path: kCompaniesMinistryView,
+          builder: (context, state) {
+            return const CompaniesMinistryView();
+          }),
+      GoRoute(
+          path: kAddCompanyToMinistryView,
+          builder: (context, state) {
+            return const AddCompanyToMinistryView();
           }),
     ],
   );

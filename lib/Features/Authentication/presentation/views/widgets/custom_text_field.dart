@@ -11,7 +11,7 @@ class CustomTextFormField extends StatelessWidget {
     this.labelStyle,
     required this.labelText,
     this.obscure = false,
-     this.fillColor,
+    this.fillColor,
     this.color,
     this.borderRadius,
     this.margin,
@@ -62,15 +62,15 @@ class CustomTextFormField extends StatelessWidget {
           fillColor: fillColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(9),
-            borderSide: const BorderSide(color: Color(0xffECEFF1)),
+            borderSide: BorderSide(color: kGrey.shade200),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(9),
-            borderSide: const BorderSide(color: Color(0xffECEFF1)),
+            borderSide: BorderSide(color: kGrey.shade200),
           ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(9),
-            borderSide: const BorderSide(color: Color(0xffECEFF1)),
+            borderSide: BorderSide(color: kGrey.shade200),
           ),
         ),
       ),
