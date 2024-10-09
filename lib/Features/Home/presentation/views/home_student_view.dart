@@ -1,6 +1,7 @@
 import 'package:depi_lms/Features/Authentication/presentation/views/widgets/login_view_body.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/curved_nav_bar.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/home_student_view_body.dart';
+import 'package:depi_lms/Features/Setting/presentation/views/setting_student_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/tasks_student_view.dart';
 import 'package:depi_lms/Features/TracksCourses/presentation/views/courses_student_view.dart';
 import 'package:depi_lms/constant.dart';
@@ -19,7 +20,7 @@ class _HomeStudentViewState extends State<HomeStudentView> {
     CoursesStudentView(),
     HomeStudentViewBody(),
     TasksStudentView(),
-    HomeStudentViewBody(),
+    SettingStudentView(),
   ];
 
   int _currentIndex = 2; // Home is selected by default

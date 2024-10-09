@@ -17,7 +17,6 @@ class _HomeStudentViewState extends State<HomeCompanyView> {
     HomeMinistryViewBody(),
     HomeCompanyViewBody(),
     TracksCompanyView() 
-    // SendingReceiveingTasksGroupTrackCompanyView()
   ];
 
   int _currentIndex = 1; // Home is selected by default

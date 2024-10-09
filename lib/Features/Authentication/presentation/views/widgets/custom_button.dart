@@ -10,14 +10,15 @@ class CustomButton extends StatelessWidget {
       this.borderRadius,
       this.border,
       this.leading,
-      this.treling});
+      this.treling, this.height});
 
   final String text;
   final TextStyle? textStyle;
   final Color? backgroundColor;
-  final IconData? leading, treling;
+  final Icon? leading, treling;
   final BorderRadiusGeometry? borderRadius;
   final BoxBorder? border;
+  final double? height;
   final VoidCallback? onTap;
 
   @override
@@ -26,7 +27,7 @@ class CustomButton extends StatelessWidget {
         onTap: onTap,
         child: Container(
           width: double.infinity,
-          height: 60,
+          height: height ?? 60,
           decoration: BoxDecoration(
             borderRadius: borderRadius,
             color: backgroundColor,
@@ -44,9 +45,8 @@ class CustomButton extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 if (leading != null)
-                  Icon(
-                    leading,
-                    color: Colors.black,
+                  Container(
+                    child: leading,
                   ),
                 const SizedBox(width: 10),
                 Text(
@@ -55,10 +55,9 @@ class CustomButton extends StatelessWidget {
                 ),
                 const SizedBox(width: 10),
                 if (treling != null)
-                  Icon(
-                    treling,
-                    color: Colors.white,
-                  ),
+                  Container(
+                    child: treling,
+                  )
               ],
             ),
           ),

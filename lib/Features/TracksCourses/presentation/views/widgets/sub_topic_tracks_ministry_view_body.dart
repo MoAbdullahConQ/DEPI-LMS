@@ -23,7 +23,8 @@ class SubTopicTracksMinistryViewBody extends StatelessWidget {
           AppBarListTile(
             addCompany: true,
             onTap: () {
-              GoRouter.of(context).push(AppRouter.kAddSubTopicTrackMinistryView);
+              GoRouter.of(context)
+                  .push(AppRouter.kAddSubTopicTrackMinistryView);
             },
             title: 'Java',
             edgeInsets: const EdgeInsets.symmetric(vertical: 7),
@@ -63,7 +64,10 @@ class SubTopicTracksMinistryViewBody extends StatelessWidget {
                             onTap: () {},
                             backgroundColor: kWhite,
                             borderRadius: BorderRadius.circular(16),
-                            leading: Icons.add,
+                            leading: const Icon(
+                              Icons.add,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ],

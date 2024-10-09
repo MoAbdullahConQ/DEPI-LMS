@@ -40,7 +40,8 @@ class RegisterTwoViewBody extends StatelessWidget {
                         ),
                         labelText: 'Email',
                         labelStyle: const TextStyle(
-                            color: kGreenColor, fontWeight: FontWeight.w200), fillColor: kGrey,
+                            color: kGreenColor, fontWeight: FontWeight.w200),
+                        fillColor: kGrey,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -51,7 +52,8 @@ class RegisterTwoViewBody extends StatelessWidget {
                         ),
                         labelText: 'Phone Number',
                         labelStyle: const TextStyle(
-                            color: kGreenColor, fontWeight: FontWeight.w200), fillColor: kGrey,
+                            color: kGreenColor, fontWeight: FontWeight.w200),
+                        fillColor: kGrey,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -63,7 +65,8 @@ class RegisterTwoViewBody extends StatelessWidget {
                         suffixIcon: const Icon(FontAwesomeIcons.link),
                         labelText: 'Linked In Link',
                         labelStyle: const TextStyle(
-                            color: kGreenColor, fontWeight: FontWeight.w200), fillColor: kGrey,
+                            color: kGreenColor, fontWeight: FontWeight.w200),
+                        fillColor: kGrey,
                       ),
                       const SizedBox(height: 40),
                       Padding(
@@ -76,7 +79,10 @@ class RegisterTwoViewBody extends StatelessWidget {
                           backgroundColor: kGreenAccentColor,
                           textStyle: Styles.textStyle20.copyWith(
                               color: Colors.white, fontWeight: FontWeight.w200),
-                          treling: Icons.add,
+                          treling: const Icon(
+                            Icons.add,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                       const SizedBox(height: 50),

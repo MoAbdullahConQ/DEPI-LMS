@@ -12,7 +12,8 @@ class AppBarListTile extends StatelessWidget {
     this.leading,
     this.edgeInsets,
     this.bill,
-    this.addCompany, this.onTap,
+    this.addCompany,
+    this.onTap,
   });
 
   final Widget? leading;
@@ -72,7 +73,10 @@ class AppBarListTile extends StatelessWidget {
             onTap: onTap,
             backgroundColor: kWhite,
             borderRadius: BorderRadius.circular(16),
-            leading: Icons.add,
+            leading: const Icon(
+              Icons.add,
+              color: Colors.white,
+            ),
           ));
     }
     return null;

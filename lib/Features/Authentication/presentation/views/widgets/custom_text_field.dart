@@ -51,6 +51,7 @@ class CustomTextFormField extends StatelessWidget {
         onChanged: onChanged,
         style: const TextStyle(
             color: kGreenColor, fontSize: 18, fontWeight: FontWeight.w600),
+        cursorColor: kGreenAccentColor,
         decoration: InputDecoration(
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
@@ -60,6 +61,7 @@ class CustomTextFormField extends StatelessWidget {
           labelStyle: labelStyle,
           filled: true,
           fillColor: fillColor,
+
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(9),
             borderSide: BorderSide(color: kGrey.shade200),

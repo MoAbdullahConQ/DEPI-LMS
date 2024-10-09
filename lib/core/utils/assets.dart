@@ -2,6 +2,7 @@ class AssetsData {
   static const logo = 'assets/images/DEPI_logo.png';
   static const itidaLogo = 'assets/images/ITIDA_logo.png';
   static const profilePic =  'assets/images/Profile_Pic.png';
+  static const profilePic2 =  'assets/images/ProfilePic2.png';
   
   static const depiLogo = 'assets/images/DEPI_logo.png';
   static const companyLogo = 'assets/images/Company_logo.png';

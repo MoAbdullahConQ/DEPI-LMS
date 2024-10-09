@@ -7,6 +7,8 @@ import 'package:depi_lms/Features/CompanyManagementMinistry/presentation/views/c
 import 'package:depi_lms/Features/Home/presentation/views/home_company_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/home_ministry_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/home_student_view.dart';
+import 'package:depi_lms/Features/Setting/presentation/views/account_setting_student_view.dart';
+import 'package:depi_lms/Features/Setting/presentation/views/setting_student_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/attached_tasks_files_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/attendnce_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/details_tasks_student_view.dart';
@@ -95,6 +97,10 @@ abstract class AppRouter {
   static const kRecordingTechnicalCoursesStudentView =
       '/recordingTechnicalCoursesStudentView';
 
+
+  static const kSettingStudentView = '/settingStudentView';
+  static const kAccountSettingStudentView = '/accountSettingStudentView';
+
   static final routers = GoRouter(
     routes: [
       // GoRoute(
@@ -120,7 +126,7 @@ abstract class AppRouter {
 
 //Home Feature
       GoRoute(
-        path: kHomeStudentView,
+        path: '/',
         builder: (context, state) => const HomeStudentView(),
       ),
       GoRoute(
@@ -128,7 +134,7 @@ abstract class AppRouter {
         builder: (context, state) => const HomeMinistryView(),
       ),
       GoRoute(
-        path: '/',
+        path: kHomeCompanyView,
         builder: (context, state) => const HomeCompanyView(),
       ),
 
@@ -313,6 +319,19 @@ abstract class AppRouter {
           path: kRecordingTechnicalCoursesStudentView,
           builder: (context, state) {
             return const RecordingTechnicalCoursesStudentView();
+          }),
+    
+//Setting Feature Student&Ministry
+//Setting Student
+      GoRoute(
+          path: kSettingStudentView,
+          builder: (context, state) {
+            return const SettingStudentView();
+          }),
+      GoRoute(
+          path: kAccountSettingStudentView,
+          builder: (context, state) {
+            return const AccountSettingStudentView();
           }),
     ],
   );

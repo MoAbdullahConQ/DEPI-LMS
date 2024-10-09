@@ -48,7 +48,10 @@ class AttachedTasksFilesViewBody extends StatelessWidget {
                       borderRadius: BorderRadius.circular(11),
                       textStyle: Styles.text18StyleW500,
                       text: 'Presentation',
-                      leading: Icons.folder_open_outlined,
+                      leading: const Icon(
+                        Icons.folder_open_outlined,
+                        color: Colors.white,
+                      ),
                     ),
                   ],
                 ),
