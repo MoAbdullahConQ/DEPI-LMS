@@ -23,6 +23,7 @@ class TasksStudentViewBody extends StatelessWidget {
             AppBarListTile(
               title: 'Tasks',
               edgeInsets: const EdgeInsets.symmetric(vertical: 7),
+              bill: true,
               leading: GestureDetector(
                 onTap: () {},
                 child: SizedBox(
@@ -31,7 +32,7 @@ class TasksStudentViewBody extends StatelessWidget {
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
                     child: Image.asset(
-                      'assets/images/Profile Pic.png',
+                      AssetsData.profilePic,
                     ),
                   ),
                 ),
@@ -53,7 +54,7 @@ class TasksStudentViewBody extends StatelessWidget {
                             title: "Task 14",
                             date: "27/9/2024",
                             goRouterLink:
-                                '${AppRouter.kSelectStudentTasksGroupTrackCompanyView}?taskName=Task 14&startDate=20/8/2024&deadline=27/8/2024'),
+                                '${AppRouter.kDetailsTasksStudentView}?taskName=Task 14&startDate=20/8/2024&deadline=27/8/2024'),
                         SubTaskCard(
                             title: "Task 13",
                             date: "25/9/2024",
@@ -75,7 +76,7 @@ class TasksStudentViewBody extends StatelessWidget {
                           title: "Task 4",
                           date: "20/9/2024",
                           goRouterLink:
-                              '${AppRouter.kSelectStudentTasksGroupTrackCompanyView}?taskName=Task 4&startDate=20/8/2024&deadline=27/8/2024',
+                              '${AppRouter.kDetailsTasksStudentView}?taskName=Task 4&startDate=20/8/2024&deadline=27/8/2024',
                         ),
                       ],
                       onTap: () {
@@ -93,7 +94,7 @@ class TasksStudentViewBody extends StatelessWidget {
                             title: "Task 6",
                             date: "19/9/2024",
                             goRouterLink:
-                                '${AppRouter.kSelectStudentTasksGroupTrackCompanyView}?taskName=Task 6&startDate=20/8/2024&deadline=27/8/2024'),
+                                '${AppRouter.kDetailsTasksStudentView}?taskName=Task 6&startDate=20/8/2024&deadline=27/8/2024'),
                       ],
                       onTap: () {
                         GoRouter.of(context).push(
@@ -110,7 +111,7 @@ class TasksStudentViewBody extends StatelessWidget {
                             title: "Task 1",
                             date: "15/9/2024",
                             goRouterLink:
-                                '${AppRouter.kSelectStudentTasksGroupTrackCompanyView}?taskName=Task 1&startDate=20/8/2024&deadline=27/8/2024'),
+                                '${AppRouter.kDetailsTasksStudentView}?taskName=Task 1&startDate=20/8/2024&deadline=27/8/2024'),
                       ],
                       onTap: () {
                         GoRouter.of(context).push(

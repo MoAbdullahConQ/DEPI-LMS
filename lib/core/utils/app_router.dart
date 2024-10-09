@@ -6,18 +6,23 @@ import 'package:depi_lms/Features/CompanyManagementMinistry/presentation/views/a
 import 'package:depi_lms/Features/CompanyManagementMinistry/presentation/views/companies_ministry_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/home_company_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/home_ministry_view.dart';
-import 'package:depi_lms/Features/Splash/presentation/views/splash_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/home_student_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/attached_tasks_files_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/attendnce_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/details_tasks_student_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/material_one_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/material_three_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/material_two_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/received_tasks_group_track_company_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/review_details_student_tasks_group_track_company_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/review_student_tasks_group_track_company_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/select_student_tasks_group_track_company_view.dart';
-import 'package:depi_lms/Features/Tasks/presentation/views/sending_receiveing_tasks_group_track_company_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/assignments_company_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/send_reports_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/sending_tasks_group_track_company_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/tasks_done_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/tasks_student_view.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/time_and_places_view.dart';
 import 'package:depi_lms/Features/TracksCourses/presentation/views/add_sub_topic_track_ministry_view.dart';
 import 'package:depi_lms/Features/TracksCourses/presentation/views/add_topic_tracks_ministry_view.dart';
 import 'package:depi_lms/Features/TracksCourses/presentation/views/add_tracks_ministry_view.dart';
@@ -50,8 +55,7 @@ abstract class AppRouter {
   static const kDetailsTasksStudentView = '/detailsTasksStudentView';
   static const kAttachedTasksFilesView = '/attachedTasksFilesView';
   //Tasks company
-  static const kSendingReceiveingTasksGroupTrackCompanyView =
-      '/sendingReceiveingTasksGroupTrackCompanyView';
+  static const kAssignmentsCompanyView = '/assignmentsCompanyView';
   static const kSendingTasksGroupTrackCompanyView =
       '/sendingTasksGroupTrackCompanyView';
   static const kSelectStudentTasksGroupTrackCompanyView =
@@ -62,6 +66,12 @@ abstract class AppRouter {
       '/reviewStudentTasksGroupTrackCompanyView';
   static const kReviewDetailsStudentTasksGroupTrackCompanyView =
       '/reviewDetailsStudentTasksGroupTrackCompanyView';
+  static const kAttendnceView = '/attendnceView';
+  static const kMaterialOneView = '/materialOneView';
+  static const kMaterialTwoView = '/materialTwoView';
+  static const kMaterialThreeView = '/materialThreeView';
+  static const kTimeAndPlacesView = '/timeAndPlacesView';
+  static const kSendReportsView = '/sendReportsView';
 
 //CompanyManagementMinistry
   static const kCompaniesMinistryView = '/companiesMinistryView';
@@ -82,7 +92,8 @@ abstract class AppRouter {
 
   static const kCoursesStudentView = '/coursesStudentView';
   static const kDetailsCourseStudentView = '/detailsCourseStudentView';
-  static const kRecordingTechnicalCoursesStudentView = '/recordingTechnicalCoursesStudentView';
+  static const kRecordingTechnicalCoursesStudentView =
+      '/recordingTechnicalCoursesStudentView';
 
   static final routers = GoRouter(
     routes: [
@@ -109,7 +120,7 @@ abstract class AppRouter {
 
 //Home Feature
       GoRoute(
-        path: '/',
+        path: kHomeStudentView,
         builder: (context, state) => const HomeStudentView(),
       ),
       GoRoute(
@@ -117,7 +128,7 @@ abstract class AppRouter {
         builder: (context, state) => const HomeMinistryView(),
       ),
       GoRoute(
-        path: kHomeCompanyView,
+        path: '/',
         builder: (context, state) => const HomeCompanyView(),
       ),
 
@@ -161,9 +172,9 @@ abstract class AppRouter {
           }),
 
       GoRoute(
-          path: kSendingReceiveingTasksGroupTrackCompanyView,
+          path: kAssignmentsCompanyView,
           builder: (context, state) {
-            return const SendingReceiveingTasksGroupTrackCompanyView();
+            return const AssignmentsCompanyView();
           }),
       GoRoute(
           path: kSendingTasksGroupTrackCompanyView,
@@ -173,7 +184,10 @@ abstract class AppRouter {
       GoRoute(
           path: kSelectStudentTasksGroupTrackCompanyView,
           builder: (context, state) {
-            return const SelectStudentTasksGroupTrackCompanyView();
+            final appbarName = state.uri.queryParameters['appbarName'];
+            return SelectStudentTasksGroupTrackCompanyView(
+              appbarName: appbarName ?? '',
+            );
           }),
       GoRoute(
           path: kReceivedTasksGroupTrackCompanyView,
@@ -192,6 +206,36 @@ abstract class AppRouter {
           path: kReviewDetailsStudentTasksGroupTrackCompanyView,
           builder: (context, state) {
             return const ReviewDetailsStudentTasksGroupTrackCompanyView();
+          }),
+      GoRoute(
+          path: kAttendnceView,
+          builder: (context, state) {
+            return const AttendnceView();
+          }),
+      GoRoute(
+          path: kMaterialOneView,
+          builder: (context, state) {
+            return const MaterialOneView();
+          }),
+      GoRoute(
+          path: kMaterialTwoView,
+          builder: (context, state) {
+            return const MaterialTwoView();
+          }),
+      GoRoute(
+          path: kMaterialThreeView,
+          builder: (context, state) {
+            return const MaterialThreeView();
+          }),
+      GoRoute(
+          path: kTimeAndPlacesView,
+          builder: (context, state) {
+            return const TimeAndPlacesView();
+          }),
+      GoRoute(
+          path: kSendReportsView,
+          builder: (context, state) {
+            return const SendReportsView();
           }),
 
 //Company Management Ministry

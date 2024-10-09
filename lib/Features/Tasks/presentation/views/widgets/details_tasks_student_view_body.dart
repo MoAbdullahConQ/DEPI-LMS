@@ -102,6 +102,9 @@ class DetailsTasksStudentViewBody extends StatelessWidget {
                       child: CustomButton(
                         text: 'Submit',
                         backgroundColor: kGreenAccentColor,
+                        onTap: () {
+                          GoRouter.of(context).pop();
+                        },
                         textStyle:
                             Styles.text25StyleW800.copyWith(color: kWhite),
                         borderRadius: BorderRadius.circular(11),

@@ -2,6 +2,7 @@ import 'package:depi_lms/Features/Authentication/presentation/views/widgets/cust
 import 'package:depi_lms/Features/Authentication/presentation/views/widgets/grediant_background.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/app_bar_list_tile.dart';
 import 'package:depi_lms/constant.dart';
+import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -40,6 +41,9 @@ class OnlyGroupTrackCompanyBody extends StatelessWidget {
                       backgroundColor: kGrey.shade200,
                       borderRadius: BorderRadius.circular(16),
                       textStyle: Styles.text32StyleW400,
+                      onTap: () {
+                        GoRouter.of(context).push(AppRouter.kAttendnceView);
+                      },
                     ),
                     const SizedBox(height: 30),
                     CustomButton(
@@ -54,6 +58,9 @@ class OnlyGroupTrackCompanyBody extends StatelessWidget {
                       backgroundColor: kGrey.shade200,
                       borderRadius: BorderRadius.circular(16),
                       textStyle: Styles.text32StyleW400,
+                      onTap: () {
+                        GoRouter.of(context).push(AppRouter.kMaterialOneView);
+                      },
                     ),
                     const SizedBox(height: 30),
                     CustomButton(
@@ -61,6 +68,10 @@ class OnlyGroupTrackCompanyBody extends StatelessWidget {
                       backgroundColor: kGrey.shade200,
                       borderRadius: BorderRadius.circular(16),
                       textStyle: Styles.text32StyleW400,
+                      onTap: () {
+                        GoRouter.of(context)
+                            .push(AppRouter.kAssignmentsCompanyView);
+                      },
                     ),
                     const SizedBox(height: 30),
                     CustomButton(
@@ -68,6 +79,9 @@ class OnlyGroupTrackCompanyBody extends StatelessWidget {
                       backgroundColor: kGrey.shade200,
                       borderRadius: BorderRadius.circular(16),
                       textStyle: Styles.text32StyleW400,
+                      onTap: () {
+                        GoRouter.of(context).push(AppRouter.kTimeAndPlacesView);
+                      },
                     ),
                     const SizedBox(height: 30),
                     CustomButton(
@@ -75,6 +89,9 @@ class OnlyGroupTrackCompanyBody extends StatelessWidget {
                       backgroundColor: kGrey.shade200,
                       borderRadius: BorderRadius.circular(16),
                       textStyle: Styles.text32StyleW400,
+                      onTap: () {
+                        GoRouter.of(context).push(AppRouter.kSendReportsView);
+                      },
                     ),
                   ],
                 ),

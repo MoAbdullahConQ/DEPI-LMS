@@ -2,13 +2,18 @@ import 'package:depi_lms/Features/Tasks/presentation/views/widgets/select_studen
 import 'package:flutter/material.dart';
 
 class SelectStudentTasksGroupTrackCompanyView extends StatelessWidget {
-  const SelectStudentTasksGroupTrackCompanyView({super.key});
+  const SelectStudentTasksGroupTrackCompanyView({super.key, required this.appbarName});
+
+  final String appbarName;
+
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: SafeArea(
-        child: SelectStudentTasksGroupTrackCompanyViewBody(),
+        child: SelectStudentTasksGroupTrackCompanyViewBody(
+          appbarName: appbarName,
+        ),
       ),
     );
   }

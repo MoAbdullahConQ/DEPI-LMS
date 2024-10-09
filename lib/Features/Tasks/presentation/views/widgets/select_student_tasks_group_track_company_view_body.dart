@@ -9,7 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class SelectStudentTasksGroupTrackCompanyViewBody extends StatefulWidget {
-  const SelectStudentTasksGroupTrackCompanyViewBody({super.key});
+  const SelectStudentTasksGroupTrackCompanyViewBody({super.key, required this.appbarName});
+
+  final String appbarName;
 
   @override
   State<SelectStudentTasksGroupTrackCompanyViewBody> createState() =>
@@ -66,7 +68,7 @@ class _SelectStudentTasksGroupTrackCompanyViewBodyState
       child: Column(
         children: [
           AppBarListTile(
-            title: 'Select Students',
+            title: widget.appbarName,
             edgeInsets: const EdgeInsets.symmetric(vertical: 7),
             leading: IconButton(
                 onPressed: () {

@@ -16,7 +16,7 @@ class _HomeStudentViewState extends State<HomeCompanyView> {
   final List<dynamic> viewsList = const [
     HomeMinistryViewBody(),
     HomeCompanyViewBody(),
-    TracksCompanyView()
+    TracksCompanyView() 
     // SendingReceiveingTasksGroupTrackCompanyView()
   ];
 

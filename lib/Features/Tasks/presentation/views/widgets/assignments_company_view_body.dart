@@ -1,14 +1,15 @@
-import 'package:depi_lms/Features/Authentication/presentation/views/widgets/custom_button.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/widgets/grediant_background.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/app_bar_list_tile.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/widgets/task_card.dart';
 import 'package:depi_lms/constant.dart';
 import 'package:depi_lms/core/utils/app_router.dart';
+import 'package:depi_lms/core/utils/assets.dart';
 import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class SendingReceiveingTasksGroupTrackCompanyViewBody extends StatelessWidget {
-  const SendingReceiveingTasksGroupTrackCompanyViewBody({super.key});
+class AssignmentsCompanyViewBody extends StatelessWidget {
+  const AssignmentsCompanyViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class SendingReceiveingTasksGroupTrackCompanyViewBody extends StatelessWidget {
             edgeInsets: const EdgeInsets.symmetric(vertical: 7),
             leading: IconButton(
                 onPressed: () {
-                  // GoRouter.of(context).pop();
+                  GoRouter.of(context).pop();
                 },
                 icon: const Icon(
                   Icons.arrow_back,
@@ -34,22 +35,20 @@ class SendingReceiveingTasksGroupTrackCompanyViewBody extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                CustomButton(
-                  text: 'Send Assignment',
-                  backgroundColor: kGreenAccentColor,
-                  textStyle: Styles.text22StyleW600.copyWith(color: kWhite),
-                  borderRadius: BorderRadius.circular(16),
+                TaskCard(
+                  title: "Send Assignment",
+                  assetImage: AssetsData.assignmentPic,
+                  textStyle: Styles.text22StyleW600,
                   onTap: () {
                     GoRouter.of(context)
                         .push(AppRouter.kSendingTasksGroupTrackCompanyView);
                   },
                 ),
                 const SizedBox(height: 20),
-                CustomButton(
-                  text: 'Receive Assignment',
-                  backgroundColor: kGreenAccentColor,
-                  textStyle: Styles.text22StyleW600.copyWith(color: kWhite),
-                  borderRadius: BorderRadius.circular(16),
+                TaskCard(
+                  title: "Receive Assignment",
+                  assetImage: AssetsData.assignmentPic,
+                  textStyle: Styles.text22StyleW600,
                   onTap: () {
                     GoRouter.of(context)
                         .push(AppRouter.kReceivedTasksGroupTrackCompanyView);

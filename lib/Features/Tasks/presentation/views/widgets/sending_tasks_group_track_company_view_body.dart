@@ -123,7 +123,7 @@ class SendingTasksGroupTrackCompanyViewBody extends StatelessWidget {
                       borderRadius: BorderRadius.circular(16),
                       onTap: () {
                         GoRouter.of(context).push(
-                            AppRouter.kSelectStudentTasksGroupTrackCompanyView);
+                            '${AppRouter.kSelectStudentTasksGroupTrackCompanyView}?appbarName=Select Students');
                       },
                     ),
                   ),
