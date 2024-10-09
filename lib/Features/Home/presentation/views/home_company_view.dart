@@ -1,7 +1,7 @@
 import 'package:depi_lms/Features/Home/presentation/views/widgets/curved_nav_bar.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/home_company_view_body.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/home_ministry_view_body.dart';
-import 'package:depi_lms/Features/Tasks/presentation/views/sending_receiveing_tasks_group_track_company_view.dart';
+import 'package:depi_lms/Features/TracksCourses/presentation/views/tracks_company_view.dart';
 import 'package:depi_lms/constant.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +16,8 @@ class _HomeStudentViewState extends State<HomeCompanyView> {
   final List<dynamic> viewsList = const [
     HomeMinistryViewBody(),
     HomeCompanyViewBody(),
-    SendingReceiveingTasksGroupTrackCompanyView()
+    TracksCompanyView()
+    // SendingReceiveingTasksGroupTrackCompanyView()
   ];
 
   int _currentIndex = 1; // Home is selected by default

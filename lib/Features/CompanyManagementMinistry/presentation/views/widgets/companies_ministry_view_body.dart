@@ -1,8 +1,10 @@
 import 'package:depi_lms/Features/Authentication/presentation/views/widgets/grediant_background.dart';
 import 'package:depi_lms/Features/CompanyManagementMinistry/presentation/views/widgets/company_ministry_list_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/app_bar_list_tile.dart';
+import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CompaniesMinistryViewBody extends StatelessWidget {
   const CompaniesMinistryViewBody({super.key});
@@ -15,10 +17,14 @@ class CompaniesMinistryViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const AppBarListTile(
+          AppBarListTile(
             title: 'Companies',
             addCompany: true,
-            edgeInsets: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            edgeInsets:
+                const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            onTap: () {
+              GoRouter.of(context).push(AppRouter.kAddCompanyToMinistryView);
+            },
           ),
           const SizedBox(height: 30),
           Text(

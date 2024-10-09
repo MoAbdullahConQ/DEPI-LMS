@@ -1,6 +1,8 @@
 class AssetsData {
   static const logo = 'assets/images/DEPI_logo.png';
   static const itidaLogo = 'assets/images/ITIDA_logo.png';
+  static const profilePic =  'assets/images/Profile_Pic.png';
+  
   static const depiLogo = 'assets/images/DEPI_logo.png';
   static const companyLogo = 'assets/images/Company_logo.png';
   
@@ -14,4 +16,8 @@ class AssetsData {
   
   static const pdfPic = 'assets/images/file 1.png';
   static const ziptPic = 'assets/images/zip 1.png';
+
+  static const recPic = 'assets/images/rec_img.png';
+  static const matPic = 'assets/images/material_img.png';
+  static const videoPic = 'assets/images/video_img.png';
 }

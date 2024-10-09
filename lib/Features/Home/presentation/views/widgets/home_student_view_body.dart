@@ -4,6 +4,7 @@ import 'package:depi_lms/Features/Home/presentation/views/widgets/attendance_tra
 import 'package:depi_lms/Features/Home/presentation/views/widgets/complaints.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/date.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/student_tracking_system.dart';
+import 'package:depi_lms/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class HomeStudentViewBody extends StatelessWidget {
@@ -19,6 +20,7 @@ class HomeStudentViewBody extends StatelessWidget {
             AppBarListTile(
               title: 'Hello',
               subTitle: 'Muhammed Ali',
+              bill: true,
               leading: GestureDetector(
                 onTap: () {},
                 child: SizedBox(
@@ -26,9 +28,7 @@ class HomeStudentViewBody extends StatelessWidget {
                   width: 60,
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
-                    child: Image.asset(
-                      'assets/images/Profile Pic.png',
-                    ),
+                    child: Image.asset(AssetsData.profilePic),
                   ),
                 ),
               ),

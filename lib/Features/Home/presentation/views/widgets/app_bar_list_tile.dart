@@ -1,10 +1,8 @@
 import 'package:depi_lms/Features/Authentication/presentation/views/widgets/custom_button.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/widgets/custom_shadow.dart';
 import 'package:depi_lms/constant.dart';
-import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class AppBarListTile extends StatelessWidget {
   const AppBarListTile({
@@ -14,13 +12,14 @@ class AppBarListTile extends StatelessWidget {
     this.leading,
     this.edgeInsets,
     this.bill,
-    this.addCompany,
+    this.addCompany, this.onTap,
   });
 
   final Widget? leading;
   final String? title, subTitle;
   final EdgeInsets? edgeInsets;
   final bool? bill, addCompany;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -70,9 +69,7 @@ class AppBarListTile extends StatelessWidget {
           child: CustomButton(
             text: 'Add',
             textStyle: Styles.text15Stylew600,
-            onTap: () {
-              GoRouter.of(context).push(AppRouter.kAddCompanyToMinistryView);
-            },
+            onTap: onTap,
             backgroundColor: kWhite,
             borderRadius: BorderRadius.circular(16),
             leading: Icons.add,
