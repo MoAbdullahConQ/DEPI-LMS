@@ -4,10 +4,11 @@ import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class Complaints extends StatelessWidget {
-  const Complaints({super.key, this.iconData, required this.positioned});
+  const Complaints({super.key, this.iconData, required this.positioned, this.onPressed});
 
   final IconData? iconData;
   final bool positioned;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class Complaints extends StatelessWidget {
                     'Complaints',
                     style: Styles.textStyle25.copyWith(color: kText),
                   ),
-                  IconButton(onPressed: () {}, icon: Icon(iconData))
+                  IconButton(onPressed:onPressed, icon: Icon(iconData))
                 ],
               ),
               Row(

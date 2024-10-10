@@ -42,22 +42,26 @@ class HomeStudentViewBody extends StatelessWidget {
                 ),
               ),
             ),
-            const Expanded(
+            Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    SizedBox(height: 30),
-                    AttendanceTraking(),
-                    SizedBox(height: 15),
-                    Date(),
-                    SizedBox(height: 15),
-                    StudentTrackingSystem(),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 30),
+                    const AttendanceTraking(),
+                    const SizedBox(height: 15),
+                    const Date(),
+                    const SizedBox(height: 15),
+                    const StudentTrackingSystem(),
+                    const SizedBox(height: 15),
                     Complaints(
                       iconData: Icons.add,
                       positioned: false,
+                      onPressed: () {
+                        GoRouter.of(context)
+                            .push(AppRouter.kComplaintsStudentView);
+                      },
                     ),
-                    SizedBox(height: 25),
+                    const SizedBox(height: 25),
                   ],
                 ),
               ),

@@ -12,6 +12,7 @@ import 'package:depi_lms/Features/Authentication/presentation/views/register_thr
 import 'package:depi_lms/Features/Authentication/presentation/views/register_two_view.dart';
 import 'package:depi_lms/Features/CompanyManagementMinistry/presentation/views/add_company_to_ministry_view.dart';
 import 'package:depi_lms/Features/CompanyManagementMinistry/presentation/views/companies_ministry_view.dart';
+import 'package:depi_lms/Features/Complaints/presentation/views/complaints_student_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/home_company_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/home_ministry_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/home_student_view.dart';
@@ -120,6 +121,14 @@ abstract class AppRouter {
   static const kRecieveAnnouncementView = '/recieveAnnouncementView';
   static const kRecieveAnnouncementStudentView = '/recieveAnnouncementStudentView';
   static const kDetalisAnnouncementStudentView = '/detalisAnnouncementStudentView';
+
+
+  static const kComplaintsStudentView = '/complaintsStudentView';
+
+
+
+
+
 
   static final routers = GoRouter(
     routes: [
@@ -401,6 +410,13 @@ abstract class AppRouter {
           path: kDetalisAnnouncementStudentView,
           builder: (context, state) {
             return const DetalisAnnouncementStudentView();
+          }),
+     
+     
+      GoRoute(
+          path: kComplaintsStudentView,
+          builder: (context, state) {
+            return const ComplaintsStudentView();
           }),
     ],
   );
