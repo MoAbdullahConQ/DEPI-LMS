@@ -4,16 +4,17 @@ import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class Complaints extends StatelessWidget {
-  const Complaints({super.key, this.iconData, required this.positioned, this.onPressed});
+  const Complaints({super.key, this.iconData, required this.positioned, this.onPressed, this.onTap});
 
   final IconData? iconData;
   final bool positioned;
   final void Function()? onPressed;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Stack(children: [
         CustomShadow(
           color: kWhite,
