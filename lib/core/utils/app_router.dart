@@ -8,6 +8,7 @@ import 'package:depi_lms/Features/Home/presentation/views/home_company_view.dart
 import 'package:depi_lms/Features/Home/presentation/views/home_ministry_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/home_student_view.dart';
 import 'package:depi_lms/Features/Setting/presentation/views/account_setting_student_view.dart';
+import 'package:depi_lms/Features/Setting/presentation/views/setting_ministry_view.dart';
 import 'package:depi_lms/Features/Setting/presentation/views/setting_student_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/attached_tasks_files_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/attendnce_view.dart';
@@ -100,6 +101,8 @@ abstract class AppRouter {
 
   static const kSettingStudentView = '/settingStudentView';
   static const kAccountSettingStudentView = '/accountSettingStudentView';
+  static const kSettingMinistryView = '/settingMinistryView';
+
 
   static final routers = GoRouter(
     routes: [
@@ -332,6 +335,12 @@ abstract class AppRouter {
           path: kAccountSettingStudentView,
           builder: (context, state) {
             return const AccountSettingStudentView();
+          }),
+//Setting Ministry
+      GoRoute(
+          path: kSettingMinistryView,
+          builder: (context, state) {
+            return const SettingMinistryView();
           }),
     ],
   );
