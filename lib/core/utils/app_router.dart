@@ -1,3 +1,6 @@
+import 'package:depi_lms/Features/Announcement/presentation/views/announcement_minstry_view.dart';
+import 'package:depi_lms/Features/Announcement/presentation/views/create_announcement_view.dart';
+import 'package:depi_lms/Features/Announcement/presentation/views/detalis_announcement_ministry_view.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/login_view.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/register_one_view.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/register_three_view.dart';
@@ -103,6 +106,9 @@ abstract class AppRouter {
   static const kAccountSettingStudentView = '/accountSettingStudentView';
   static const kSettingMinistryView = '/settingMinistryView';
 
+  static const kAnnouncementMinstryView = '/announcementMinstryView';
+  static const kCreateAnnouncementView = '/createAnnouncementView';
+  static const kDetalisAnnouncementMinistryView = '/detalisAnnouncementMinistryView';
 
   static final routers = GoRouter(
     routes: [
@@ -341,6 +347,25 @@ abstract class AppRouter {
           path: kSettingMinistryView,
           builder: (context, state) {
             return const SettingMinistryView();
+          }),
+
+
+//Announcement Ministry
+//Announcement Ministry
+      GoRoute(
+          path: kAnnouncementMinstryView,
+          builder: (context, state) {
+            return const AnnouncementMinstryView();
+          }),
+      GoRoute(
+          path: kCreateAnnouncementView,
+          builder: (context, state) {
+            return const CreateAnnouncementView();
+          }),
+      GoRoute(
+          path: kDetalisAnnouncementMinistryView,
+          builder: (context, state) {
+            return const DetalisAnnouncementMinistryView();
           }),
     ],
   );
