@@ -2,14 +2,21 @@ import 'package:depi_lms/Features/Authentication/presentation/views/widgets/gred
 import 'package:depi_lms/Features/Home/presentation/views/widgets/app_bar_list_tile.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/widgets/task_card.dart';
 import 'package:depi_lms/constant.dart';
-import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:depi_lms/core/utils/assets.dart';
 import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class AssignmentsCompanyViewBody extends StatelessWidget {
-  const AssignmentsCompanyViewBody({super.key});
+class SendRecieveViewBody extends StatelessWidget {
+  const SendRecieveViewBody(
+      {super.key,
+      required this.appBarName,
+      required this.txtOne,
+      required this.txtTwo,
+      required this.goRouterLink1,
+      required this.goRouterLink2});
+
+  final String appBarName, txtOne, txtTwo, goRouterLink1, goRouterLink2;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +26,7 @@ class AssignmentsCompanyViewBody extends StatelessWidget {
       child: Column(
         children: [
           AppBarListTile(
-            title: 'Assignments',
+            title: appBarName, 
             edgeInsets: const EdgeInsets.symmetric(vertical: 7),
             leading: IconButton(
                 onPressed: () {
@@ -36,22 +43,22 @@ class AssignmentsCompanyViewBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 TaskCard(
-                  title: "Send Assignment",
+                  title: txtOne, 
                   assetImage: AssetsData.assignmentPic,
                   textStyle: Styles.text22StyleW600,
                   onTap: () {
-                    GoRouter.of(context)
-                        .push(AppRouter.kSendingTasksGroupTrackCompanyView);
+                    GoRouter.of(context).push(
+                        goRouterLink1); 
                   },
                 ),
                 const SizedBox(height: 20),
                 TaskCard(
-                  title: "Receive Assignment",
+                  title: txtTwo, 
                   assetImage: AssetsData.assignmentPic,
                   textStyle: Styles.text22StyleW600,
                   onTap: () {
-                    GoRouter.of(context)
-                        .push(AppRouter.kReceivedTasksGroupTrackCompanyView);
+                    GoRouter.of(context).push(
+                        goRouterLink2); 
                   },
                 ),
               ],

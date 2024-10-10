@@ -1,4 +1,5 @@
-import 'package:depi_lms/Features/Tasks/presentation/views/widgets/assignments_company_view_body.dart';
+import 'package:depi_lms/Features/Tasks/presentation/views/widgets/send_recieve_view_body.dart';
+import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 
 class AssignmentsCompanyView extends StatelessWidget {
@@ -7,7 +8,14 @@ class AssignmentsCompanyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SafeArea(child: AssignmentsCompanyViewBody()),
+      body: SafeArea(
+          child: SendRecieveViewBody(
+        appBarName: 'Assignments',
+        txtOne: 'Send Assignment',
+        txtTwo: 'Receive Assignment',
+        goRouterLink1: AppRouter.kSendingTasksGroupTrackCompanyView,
+        goRouterLink2: AppRouter.kReceivedTasksGroupTrackCompanyView,
+      )),
     );
   }
 }

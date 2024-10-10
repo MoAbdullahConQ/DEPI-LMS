@@ -1,6 +1,9 @@
 import 'package:depi_lms/Features/Announcement/presentation/views/announcement_minstry_view.dart';
-import 'package:depi_lms/Features/Announcement/presentation/views/create_announcement_view.dart';
+import 'package:depi_lms/Features/Announcement/presentation/views/create_announcement_company_view.dart';
+import 'package:depi_lms/Features/Announcement/presentation/views/create_announcement_ministry_view.dart';
 import 'package:depi_lms/Features/Announcement/presentation/views/detalis_announcement_ministry_view.dart';
+import 'package:depi_lms/Features/Announcement/presentation/views/recieve_announcement_company_view.dart';
+import 'package:depi_lms/Features/Announcement/presentation/views/send_recieve_announcement_company_view.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/login_view.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/register_one_view.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/register_three_view.dart';
@@ -101,14 +104,18 @@ abstract class AppRouter {
   static const kRecordingTechnicalCoursesStudentView =
       '/recordingTechnicalCoursesStudentView';
 
-
   static const kSettingStudentView = '/settingStudentView';
   static const kAccountSettingStudentView = '/accountSettingStudentView';
   static const kSettingMinistryView = '/settingMinistryView';
 
   static const kAnnouncementMinstryView = '/announcementMinstryView';
-  static const kCreateAnnouncementView = '/createAnnouncementView';
-  static const kDetalisAnnouncementMinistryView = '/detalisAnnouncementMinistryView';
+  static const kCreateAnnouncementMinistryView = '/createAnnouncementMinistryView';
+  static const kDetalisAnnouncementMinistryView =
+      '/detalisAnnouncementMinistryView';
+
+  static const kSendRecieveAnnouncementView = '/sendRecieveAnnouncementView';
+  static const kCreateAnnouncementCompanyView = '/createAnnouncementCompanyView';
+  static const kRecieveAnnouncementView = '/recieveAnnouncementView';
 
   static final routers = GoRouter(
     routes: [
@@ -135,17 +142,17 @@ abstract class AppRouter {
 
 //Home Feature
       GoRoute(
-        path: kHomeStudentView,
+        path: '/',
         builder: (context, state) => const HomeStudentView(),
       ),
-      GoRoute(
-        path: '/',
-        builder: (context, state) => const HomeMinistryView(),
-      ),
-      GoRoute(
-        path: kHomeCompanyView,
-        builder: (context, state) => const HomeCompanyView(),
-      ),
+      // GoRoute(
+      //   path: '/',
+      //   builder: (context, state) => const HomeMinistryView(),
+      // ),
+      // GoRoute(
+      //   path: '/',
+      //   builder: (context, state) => const HomeCompanyView(),
+      // ),
 
 //Tasks Feature
       GoRoute(
@@ -213,7 +220,6 @@ abstract class AppRouter {
           path: kReviewStudentTasksGroupTrackCompanyView,
           builder: (context, state) {
             final taskName = state.uri.queryParameters['taskName'];
-
             return ReviewStudentTasksGroupTrackCompanyView(
                 taskName: taskName ?? '');
           }),
@@ -329,7 +335,7 @@ abstract class AppRouter {
           builder: (context, state) {
             return const RecordingTechnicalCoursesStudentView();
           }),
-    
+
 //Setting Feature Student&Ministry
 //Setting Student
       GoRoute(
@@ -349,8 +355,7 @@ abstract class AppRouter {
             return const SettingMinistryView();
           }),
 
-
-//Announcement Ministry
+//Announcement Ministry & Company
 //Announcement Ministry
       GoRoute(
           path: kAnnouncementMinstryView,
@@ -358,14 +363,30 @@ abstract class AppRouter {
             return const AnnouncementMinstryView();
           }),
       GoRoute(
-          path: kCreateAnnouncementView,
+          path: kCreateAnnouncementMinistryView,
           builder: (context, state) {
-            return const CreateAnnouncementView();
+            return const CreateAnnouncementMinistryView();
           }),
       GoRoute(
           path: kDetalisAnnouncementMinistryView,
           builder: (context, state) {
             return const DetalisAnnouncementMinistryView();
+          }),
+//Announcement Company
+      GoRoute(
+          path: kSendRecieveAnnouncementView,
+          builder: (context, state) {
+            return const SendRecieveAnnouncementView();
+          }),
+      GoRoute(
+          path: kCreateAnnouncementCompanyView,
+          builder: (context, state) {
+            return const CreateAnnouncementCompanyView();
+          }),
+      GoRoute(
+          path: kRecieveAnnouncementView,
+          builder: (context, state) {
+            return const RecieveAnnouncementView();
           }),
     ],
   );

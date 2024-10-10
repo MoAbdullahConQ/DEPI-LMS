@@ -22,7 +22,7 @@ class DetalisAnnouncementMinistryViewBody extends StatelessWidget {
               title: 'details Announcement',
               edgeInsets: const EdgeInsets.only(top: 7, bottom: 7, left: 16),
               onTap: () {
-                GoRouter.of(context).push(AppRouter.kCreateAnnouncementView);
+                GoRouter.of(context).push(AppRouter.kCreateAnnouncementMinistryView);
               },
               leading: IconButton(
                   onPressed: () {

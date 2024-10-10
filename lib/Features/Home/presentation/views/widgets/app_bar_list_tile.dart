@@ -56,7 +56,7 @@ class AppBarListTile extends StatelessWidget {
   Widget? trailing(BuildContext context, bool? bill, bool? addCompany) {
     if (bill == true) {
       return IconButton(
-        onPressed: () {},
+        onPressed: onTap,
         icon: const Icon(
           Icons.notifications_none,
           color: kWhite,

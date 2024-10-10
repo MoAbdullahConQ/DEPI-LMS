@@ -1,4 +1,5 @@
-import 'package:depi_lms/Features/Announcement/presentation/views/widgets/announcement_minstry_view_body.dart';
+import 'package:depi_lms/Features/Announcement/presentation/views/widgets/revieve_announcements_view_body.dart';
+import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 
 class AnnouncementMinstryView extends StatelessWidget {
@@ -8,7 +9,10 @@ class AnnouncementMinstryView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-        child: AnnouncementMinstryViewBody(),
+        child: RecieveAnnouncementsViewBody(
+          addCompany: true,
+          goRouterLink: AppRouter.kCreateAnnouncementMinistryView,
+        ),
       ),
     );
   }

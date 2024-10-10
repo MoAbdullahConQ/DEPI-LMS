@@ -6,8 +6,9 @@ import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class AnnouncementMinstryViewBody extends StatelessWidget {
-  const AnnouncementMinstryViewBody({super.key});
+class RecieveAnnouncementsViewBody extends StatelessWidget {
+  const RecieveAnnouncementsViewBody(
+      {super.key, this.addCompany, this.goRouterLink, this.leading});
 
   final List<Widget> announcementCardList = const [
     AnnouncementCardListViewItem(
@@ -37,6 +38,10 @@ class AnnouncementMinstryViewBody extends StatelessWidget {
         date: '6/10/2024')
   ];
 
+  final bool? addCompany;
+  final String? goRouterLink;
+  final Widget? leading;
+
   @override
   Widget build(BuildContext context) {
     return GradientBackground(
@@ -45,12 +50,13 @@ class AnnouncementMinstryViewBody extends StatelessWidget {
         child: Column(
           children: [
             AppBarListTile(
-              title: 'Announcement',
+              title: 'Announcements',
               edgeInsets: const EdgeInsets.only(top: 7, bottom: 7, left: 16),
-              addCompany: true,
+              addCompany: addCompany,
               onTap: () {
-                GoRouter.of(context).push(AppRouter.kCreateAnnouncementView);
+                GoRouter.of(context).push(goRouterLink ?? '');
               },
+              leading: leading,
             ),
             const SizedBox(height: 25),
             Expanded(

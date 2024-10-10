@@ -29,7 +29,6 @@ class _SettingMinistryViewBodyState extends State<SettingMinistryViewBody> {
             const AppBarListTile(
               title: 'Setting',
               edgeInsets: EdgeInsets.only(top: 7, bottom: 7, left: 16),
-              bill: true,
             ),
             Expanded(
               child: SingleChildScrollView(
