@@ -3,6 +3,7 @@ import 'package:depi_lms/Features/Announcement/presentation/views/create_announc
 import 'package:depi_lms/Features/Announcement/presentation/views/create_announcement_ministry_view.dart';
 import 'package:depi_lms/Features/Announcement/presentation/views/detalis_announcement_ministry_view.dart';
 import 'package:depi_lms/Features/Announcement/presentation/views/recieve_announcement_company_view.dart';
+import 'package:depi_lms/Features/Announcement/presentation/views/recieve_announcement_student_view.dart';
 import 'package:depi_lms/Features/Announcement/presentation/views/send_recieve_announcement_company_view.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/login_view.dart';
 import 'package:depi_lms/Features/Authentication/presentation/views/register_one_view.dart';
@@ -116,6 +117,7 @@ abstract class AppRouter {
   static const kSendRecieveAnnouncementView = '/sendRecieveAnnouncementView';
   static const kCreateAnnouncementCompanyView = '/createAnnouncementCompanyView';
   static const kRecieveAnnouncementView = '/recieveAnnouncementView';
+  static const kRecieveAnnouncementStudentView = '/recieveAnnouncementStudentView';
 
   static final routers = GoRouter(
     routes: [
@@ -387,6 +389,11 @@ abstract class AppRouter {
           path: kRecieveAnnouncementView,
           builder: (context, state) {
             return const RecieveAnnouncementView();
+          }),
+      GoRoute(
+          path: kRecieveAnnouncementStudentView,
+          builder: (context, state) {
+            return const RecieveAnnouncementStudentView();
           }),
     ],
   );

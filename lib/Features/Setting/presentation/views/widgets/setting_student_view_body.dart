@@ -33,8 +33,15 @@ class _SettingStudentViewBodyState extends State<SettingStudentViewBody> {
               title: 'Setting',
               edgeInsets: const EdgeInsets.symmetric(vertical: 7),
               bill: true,
+              onTap: () {
+                GoRouter.of(context)
+                    .push(AppRouter.kRecieveAnnouncementStudentView);
+              },
               leading: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  GoRouter.of(context)
+                      .push(AppRouter.kAccountSettingStudentView);
+                },
                 child: SizedBox(
                   height: 60,
                   width: 60,

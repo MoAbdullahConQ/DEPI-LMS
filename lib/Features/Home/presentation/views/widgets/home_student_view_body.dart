@@ -4,8 +4,10 @@ import 'package:depi_lms/Features/Home/presentation/views/widgets/attendance_tra
 import 'package:depi_lms/Features/Home/presentation/views/widgets/complaints.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/date.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/student_tracking_system.dart';
+import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:depi_lms/core/utils/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeStudentViewBody extends StatelessWidget {
   const HomeStudentViewBody({super.key});
@@ -21,8 +23,15 @@ class HomeStudentViewBody extends StatelessWidget {
               title: 'Hello',
               subTitle: 'Muhammed Ali',
               bill: true,
+              onTap: () {
+                GoRouter.of(context)
+                    .push(AppRouter.kRecieveAnnouncementStudentView);
+              },
               leading: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  GoRouter.of(context)
+                      .push(AppRouter.kAccountSettingStudentView);
+                },
                 child: SizedBox(
                   height: 60,
                   width: 60,
