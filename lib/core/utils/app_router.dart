@@ -12,6 +12,8 @@ import 'package:depi_lms/Features/Authentication/presentation/views/register_thr
 import 'package:depi_lms/Features/Authentication/presentation/views/register_two_view.dart';
 import 'package:depi_lms/Features/CompanyManagementMinistry/presentation/views/add_company_to_ministry_view.dart';
 import 'package:depi_lms/Features/CompanyManagementMinistry/presentation/views/companies_ministry_view.dart';
+import 'package:depi_lms/Features/Complaints/presentation/views/complaints_company_view.dart';
+import 'package:depi_lms/Features/Complaints/presentation/views/complaints_details_company_view.dart';
 import 'package:depi_lms/Features/Complaints/presentation/views/complaints_details_ministry_view.dart';
 import 'package:depi_lms/Features/Complaints/presentation/views/complaints_ministry_view.dart';
 import 'package:depi_lms/Features/Complaints/presentation/views/complaints_student_view.dart';
@@ -128,6 +130,8 @@ abstract class AppRouter {
   static const kComplaintsStudentView = '/complaintsStudentView';
   static const kComplaintsMinistryView = '/complaintsMinistryView';
   static const kComplaintsDetailsMinistryView = '/complaintsDetailsMinistryView';
+  static const kComplaintsCompanyView = '/complaintsCompanyView';
+  static const kComplaintsDetailsCompanyView = '/complaintsDetailsCompanyView';
 
 
 
@@ -162,14 +166,14 @@ abstract class AppRouter {
       //   path: '/',
       //   builder: (context, state) => const HomeStudentView(),
       // ),
-      GoRoute(
-        path: '/',
-        builder: (context, state) => const HomeMinistryView(),
-      ),
       // GoRoute(
       //   path: '/',
-      //   builder: (context, state) => const HomeCompanyView(),
+      //   builder: (context, state) => const HomeMinistryView(),
       // ),
+      GoRoute(
+        path: '/',
+        builder: (context, state) => const HomeCompanyView(),
+      ),
 
 //Tasks Feature
       GoRoute(
@@ -431,6 +435,16 @@ abstract class AppRouter {
           path: kComplaintsDetailsMinistryView,
           builder: (context, state) {
             return const ComplaintsDetailsMinistryView();
+          }),
+      GoRoute(
+          path: kComplaintsCompanyView,
+          builder: (context, state) {
+            return const ComplaintsCompanyView();
+          }),
+      GoRoute(
+          path: kComplaintsDetailsCompanyView,
+          builder: (context, state) {
+            return const ComplaintsDetailsCompanyView();
           }),
     ],
   );

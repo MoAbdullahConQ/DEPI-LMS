@@ -6,8 +6,8 @@ import 'package:depi_lms/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class ComplaintsMinistryViewBody extends StatelessWidget {
-  const ComplaintsMinistryViewBody({super.key});
+class ComplaintsMinistryCompanyViewBody extends StatelessWidget {
+  const ComplaintsMinistryCompanyViewBody({super.key});
 
   final List<Map<String, dynamic>> complaints = const [
     {

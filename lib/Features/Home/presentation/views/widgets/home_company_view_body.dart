@@ -38,7 +38,11 @@ class HomeCompanyViewBody extends StatelessWidget {
                     ),
                     const CompanyGroupsTrackingSystem(),
                     const SizedBox(height: 15),
-                    const Complaints(
+                    Complaints(
+                      onTap: () {
+                        GoRouter.of(context)
+                            .push(AppRouter.kComplaintsCompanyView);
+                      },
                       positioned: true,
                     ),
                     const SizedBox(height: 25),
