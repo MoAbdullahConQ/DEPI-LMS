@@ -8,8 +8,29 @@ import 'package:depi_lms/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class LoginViewBody extends StatelessWidget {
+class LoginViewBody extends StatefulWidget {
   const LoginViewBody({super.key});
+
+  @override
+  State<LoginViewBody> createState() => _LoginViewBodyState();
+}
+
+class _LoginViewBodyState extends State<LoginViewBody> {
+  String email = '';
+
+  String goRouterLink = '';
+
+  void determineRouterLink() {
+    if (email == 'Student@depi.com') {
+      goRouterLink = AppRouter.kHomeStudentView;
+    } else if (email == 'Ministry@depi.com') {
+      goRouterLink = AppRouter.kHomeMinistryView;
+    } else if (email == 'Company@depi.com') {
+      goRouterLink = AppRouter.kHomeCompanyView;
+    } else {
+      goRouterLink = '';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +61,11 @@ class LoginViewBody extends StatelessWidget {
             ),
             const SizedBox(height: 14),
             CustomTextFormField(
-              onChanged: (v) {},
+              onChanged: (p0) {
+                setState(() {
+                  email = p0;
+                });
+              },
               prefixIcon: const Icon(
                 Icons.email_outlined,
                 color: kGreenColor,
@@ -84,7 +109,17 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(height: 20),
             CustomButton(
               onTap: () {
-                GoRouter.of(context).push(AppRouter.kHomeStudentView);
+                setState(() {
+                  determineRouterLink();
+                });
+                if (goRouterLink.isNotEmpty) {
+                  GoRouter.of(context).push(goRouterLink);
+                } else {
+                  // Show some error or feedback to the user
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Invalid email')),
+                  );
+                }
               },
               text: 'Login',
               backgroundColor: kGreenAccentColor,

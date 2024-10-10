@@ -23,6 +23,7 @@ import 'package:depi_lms/Features/Home/presentation/views/home_student_view.dart
 import 'package:depi_lms/Features/Setting/presentation/views/account_setting_student_view.dart';
 import 'package:depi_lms/Features/Setting/presentation/views/setting_ministry_view.dart';
 import 'package:depi_lms/Features/Setting/presentation/views/setting_student_view.dart';
+import 'package:depi_lms/Features/Splash/presentation/views/splash_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/attached_tasks_files_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/attendnce_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/details_tasks_student_view.dart';
@@ -144,38 +145,38 @@ abstract class AppRouter {
 
   static final routers = GoRouter(
     routes: [
-      // GoRoute(
-      //   path: '/',
-      //   builder: (context, state) => const SplashView(),
-      // ),
-      // GoRoute(
-      //   path: kLoginView,
-      //   builder: (context, state) => const LoginView(),
-      // ),
-      // GoRoute(
-      //   path: kRegisterOneView,
-      //   builder: (context, state) => const RegisterOneView(),
-      // ),
-      // GoRoute(
-      //   path: kRegisterTwoView,
-      //   builder: (context, state) => const RegisterTwoView(),
-      // ),
-      // GoRoute(
-      //   path: kRegisterThreeView,
-      //   builder: (context, state) => const RegisterThreeView(),
-      // ),
-
-//Home Feature
-      // GoRoute(
-      //   path: '/',
-      //   builder: (context, state) => const HomeStudentView(),
-      // ),
-      // GoRoute(
-      //   path: '/',
-      //   builder: (context, state) => const HomeMinistryView(),
-      // ),
       GoRoute(
         path: '/',
+        builder: (context, state) => const SplashView(),
+      ),
+      GoRoute(
+        path: kLoginView,
+        builder: (context, state) => const LoginView(),
+      ),
+      GoRoute(
+        path: kRegisterOneView,
+        builder: (context, state) => const RegisterOneView(),
+      ),
+      GoRoute(
+        path: kRegisterTwoView,
+        builder: (context, state) => const RegisterTwoView(),
+      ),
+      GoRoute(
+        path: kRegisterThreeView,
+        builder: (context, state) => const RegisterThreeView(),
+      ),
+
+//Home Feature
+      GoRoute(
+        path: kHomeStudentView,
+        builder: (context, state) => const HomeStudentView(),
+      ),
+      GoRoute(
+        path: kHomeMinistryView,
+        builder: (context, state) => const HomeMinistryView(),
+      ),
+      GoRoute(
+        path: kHomeCompanyView,
         builder: (context, state) => const HomeCompanyView(),
       ),
 

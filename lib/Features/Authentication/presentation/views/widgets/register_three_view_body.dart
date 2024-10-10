@@ -38,7 +38,7 @@ class RegisterThreeViewBody extends StatelessWidget {
                         labelText: 'University',
                         labelStyle: const TextStyle(
                             color: kGreenColor, fontWeight: FontWeight.w200),
-                        fillColor: kGrey,
+                        fillColor: kGrey.shade200,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -50,7 +50,7 @@ class RegisterThreeViewBody extends StatelessWidget {
                         labelText: 'Faculty',
                         labelStyle: const TextStyle(
                             color: kGreenColor, fontWeight: FontWeight.w200),
-                        fillColor: kGrey,
+                        fillColor: kGrey.shade200,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -62,7 +62,7 @@ class RegisterThreeViewBody extends StatelessWidget {
                         labelText: 'Major',
                         labelStyle: const TextStyle(
                             color: kGreenColor, fontWeight: FontWeight.w200),
-                        fillColor: kGrey,
+                        fillColor: kGrey.shade200,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -74,7 +74,7 @@ class RegisterThreeViewBody extends StatelessWidget {
                         labelText: 'Degree',
                         labelStyle: const TextStyle(
                             color: kGreenColor, fontWeight: FontWeight.w200),
-                        fillColor: kGrey,
+                        fillColor: kGrey.shade200,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -86,20 +86,24 @@ class RegisterThreeViewBody extends StatelessWidget {
                         labelText: 'Government Of Training',
                         labelStyle: const TextStyle(
                             color: kGreenColor, fontWeight: FontWeight.w200),
-                        fillColor: kGrey,
+                        fillColor: kGrey.shade200,
                       ),
                       const SizedBox(height: 50),
-                      CustomButton(
-                        onTap: () {
-                          GoRouter.of(context).push(AppRouter.kLoginView);
-                        },
-                        text: 'Register',
-                        backgroundColor: kGreenAccentColor,
-                        textStyle:
-                            Styles.textStyle20.copyWith(color: Colors.white),
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(15),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 13.0),
+                        child: CustomButton(
+                          onTap: () {
+                            GoRouter.of(context).push(AppRouter.kLoginView);
+                          },
+                          text: 'Register',
+                          backgroundColor: kGreenAccentColor,
+                          textStyle: Styles.text22StyleW600
+                              .copyWith(color: Colors.white),
+                          border: Border.all(color: Colors.white),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
                       ),
+                      const SizedBox(height: 50),
                     ],
                   ),
                 ),

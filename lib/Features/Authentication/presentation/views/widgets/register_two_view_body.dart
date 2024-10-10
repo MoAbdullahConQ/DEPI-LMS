@@ -41,7 +41,7 @@ class RegisterTwoViewBody extends StatelessWidget {
                         labelText: 'Email',
                         labelStyle: const TextStyle(
                             color: kGreenColor, fontWeight: FontWeight.w200),
-                        fillColor: kGrey,
+                        fillColor: kGrey.shade200,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -53,7 +53,7 @@ class RegisterTwoViewBody extends StatelessWidget {
                         labelText: 'Phone Number',
                         labelStyle: const TextStyle(
                             color: kGreenColor, fontWeight: FontWeight.w200),
-                        fillColor: kGrey,
+                        fillColor: kGrey.shade200,
                       ),
                       const SizedBox(height: 13),
                       CustomTextFormField(
@@ -66,7 +66,7 @@ class RegisterTwoViewBody extends StatelessWidget {
                         labelText: 'Linked In Link',
                         labelStyle: const TextStyle(
                             color: kGreenColor, fontWeight: FontWeight.w200),
-                        fillColor: kGrey,
+                        fillColor: kGrey.shade200,
                       ),
                       const SizedBox(height: 40),
                       Padding(
@@ -77,6 +77,7 @@ class RegisterTwoViewBody extends StatelessWidget {
                           },
                           text: 'Upload Photo Image',
                           backgroundColor: kGreenAccentColor,
+                          borderRadius: BorderRadius.circular(16),
                           textStyle: Styles.textStyle20.copyWith(
                               color: Colors.white, fontWeight: FontWeight.w200),
                           treling: const Icon(
@@ -86,17 +87,20 @@ class RegisterTwoViewBody extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 50),
-                      CustomButton(
-                        onTap: () {
-                          GoRouter.of(context)
-                              .push(AppRouter.kRegisterThreeView);
-                        },
-                        text: 'Continue',
-                        backgroundColor: kGreenAccentColor,
-                        textStyle:
-                            Styles.textStyle20.copyWith(color: Colors.white),
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(15),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 13.0),
+                        child: CustomButton(
+                          onTap: () {
+                            GoRouter.of(context)
+                                .push(AppRouter.kRegisterThreeView);
+                          },
+                          text: 'Continue',
+                          backgroundColor: kGreenAccentColor,
+                          textStyle:
+                              Styles.textStyle20.copyWith(color: Colors.white),
+                          border: Border.all(color: Colors.white),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
                       ),
                     ],
                   ),
