@@ -93,50 +93,54 @@ abstract class AppRouter {
   static const kCompaniesMinistryView = '/companiesMinistryView';
   static const kAddCompanyToMinistryView = '/addCompanyToMinistryView';
 
-  // tracks Minstry & Company
-  // tracks Minstry
+// Tracks Minstry & Company & Student Feature
+// Tracks Ministry
   static const kTracksMinistryView = '/tracksMinistryView';
   static const kAddTracksMinistryView = '/addTracksMinistryView';
   static const kTopicTracksMinistryView = '/topicTracksMinistryView';
   static const kAddTopicTracksMinistryView = '/addTopicTracksMinistryView';
   static const kSubTopicTracksMinistryView = '/subTopicTracksMinistryView';
   static const kAddSubTopicTrackMinistryView = '/addSubTopicTrackMinistryView';
-  // tracks Company
+// Tracks Company
   static const kTracksCompanyView = '/tracksCompanyView';
   static const kGroupsTrackComponyView = '/groupsTrackComponyView';
   static const kOnlyGroupTrackCompany = '/onlyGroupTrackCompany';
-
+// Tracks Student
   static const kCoursesStudentView = '/coursesStudentView';
   static const kDetailsCourseStudentView = '/detailsCourseStudentView';
   static const kRecordingTechnicalCoursesStudentView =
       '/recordingTechnicalCoursesStudentView';
 
+// Setting
   static const kSettingStudentView = '/settingStudentView';
   static const kAccountSettingStudentView = '/accountSettingStudentView';
   static const kSettingMinistryView = '/settingMinistryView';
 
+// Announcement Minstry & Company & Student
+// Announcement Minstry
   static const kAnnouncementMinstryView = '/announcementMinstryView';
-  static const kCreateAnnouncementMinistryView = '/createAnnouncementMinistryView';
+  static const kCreateAnnouncementMinistryView =
+      '/createAnnouncementMinistryView';
   static const kDetalisAnnouncementMinistryView =
       '/detalisAnnouncementMinistryView';
-
+// Announcement Company
   static const kSendRecieveAnnouncementView = '/sendRecieveAnnouncementView';
-  static const kCreateAnnouncementCompanyView = '/createAnnouncementCompanyView';
+  static const kCreateAnnouncementCompanyView =
+      '/createAnnouncementCompanyView';
   static const kRecieveAnnouncementView = '/recieveAnnouncementView';
-  static const kRecieveAnnouncementStudentView = '/recieveAnnouncementStudentView';
-  static const kDetalisAnnouncementStudentView = '/detalisAnnouncementStudentView';
+// Announcement Student
+  static const kRecieveAnnouncementStudentView =
+      '/recieveAnnouncementStudentView';
+  static const kDetalisAnnouncementStudentView =
+      '/detalisAnnouncementStudentView';
 
-
+// Complaints
   static const kComplaintsStudentView = '/complaintsStudentView';
   static const kComplaintsMinistryView = '/complaintsMinistryView';
-  static const kComplaintsDetailsMinistryView = '/complaintsDetailsMinistryView';
+  static const kComplaintsDetailsMinistryView =
+      '/complaintsDetailsMinistryView';
   static const kComplaintsCompanyView = '/complaintsCompanyView';
   static const kComplaintsDetailsCompanyView = '/complaintsDetailsCompanyView';
-
-
-
-
-
 
   static final routers = GoRouter(
     routes: [
@@ -176,6 +180,7 @@ abstract class AppRouter {
       ),
 
 //Tasks Feature
+//Tasks student
       GoRoute(
         path: kTasksStudentView,
         builder: (context, state) => const TasksStudentView(),
@@ -213,7 +218,7 @@ abstract class AppRouter {
               taskName: taskName ?? '',
             );
           }),
-
+//Tasks company
       GoRoute(
           path: kAssignmentsCompanyView,
           builder: (context, state) {
@@ -293,7 +298,7 @@ abstract class AppRouter {
           }),
 
 // Tracks Minstry & Company & Student Feature
-// Tracks TracksMinistry
+// Tracks Ministry
       GoRoute(
           path: kTracksMinistryView,
           builder: (context, state) {
@@ -324,7 +329,7 @@ abstract class AppRouter {
           builder: (context, state) {
             return const AddSubTopicTrackMinistryView();
           }),
-// Tracks TracksCompany
+// Tracks Company
       GoRoute(
           path: kTracksCompanyView,
           builder: (context, state) {
@@ -376,7 +381,7 @@ abstract class AppRouter {
             return const SettingMinistryView();
           }),
 
-//Announcement Ministry & Company
+// Announcement Minstry & Company & Student
 //Announcement Ministry
       GoRoute(
           path: kAnnouncementMinstryView,
@@ -409,6 +414,7 @@ abstract class AppRouter {
           builder: (context, state) {
             return const RecieveAnnouncementView();
           }),
+// Announcement Student
       GoRoute(
           path: kRecieveAnnouncementStudentView,
           builder: (context, state) {
@@ -419,8 +425,8 @@ abstract class AppRouter {
           builder: (context, state) {
             return const DetalisAnnouncementStudentView();
           }),
-     
-     
+
+// Complaints
       GoRoute(
           path: kComplaintsStudentView,
           builder: (context, state) {
