@@ -2,7 +2,7 @@ import 'package:depi_lms/Features/Authentication/presentation/views/widgets/logi
 import 'package:depi_lms/Features/CompanyManagementMinistry/presentation/views/companies_ministry_view.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/curved_nav_bar.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/home_ministry_view_body.dart';
-import 'package:depi_lms/Features/Home/presentation/views/widgets/home_student_view_body.dart';
+import 'package:depi_lms/Features/Setting/presentation/views/setting_ministry_view.dart';
 import 'package:depi_lms/Features/TracksCourses/presentation/views/tracks_ministry_view.dart';
 import 'package:depi_lms/constant.dart';
 import 'package:flutter/material.dart';
@@ -15,12 +15,12 @@ class HomeMinistryView extends StatefulWidget {
 }
 
 class _HomeStudentViewState extends State<HomeMinistryView> {
-  final List<dynamic> viewsList = const[
+  final List<dynamic> viewsList = const [
     TracksMinistryView(),
     CompaniesMinistryView(),
     HomeMinistryViewBody(),
     LoginViewBody(),
-    HomeStudentViewBody(),
+    SettingMinistryView(),
   ];
 
   int _currentIndex = 2; // Home is selected by default

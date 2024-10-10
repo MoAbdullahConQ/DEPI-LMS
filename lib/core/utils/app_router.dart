@@ -126,11 +126,11 @@ abstract class AppRouter {
 
 //Home Feature
       GoRoute(
-        path: '/',
+        path: kHomeStudentView,
         builder: (context, state) => const HomeStudentView(),
       ),
       GoRoute(
-        path: kHomeMinistryView,
+        path: '/',
         builder: (context, state) => const HomeMinistryView(),
       ),
       GoRoute(

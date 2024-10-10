@@ -75,7 +75,7 @@ class AppBarListTile extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             leading: const Icon(
               Icons.add,
-              color: Colors.white,
+              color: Colors.black,
             ),
           ));
     }

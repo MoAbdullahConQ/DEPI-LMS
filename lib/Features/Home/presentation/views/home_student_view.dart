@@ -1,4 +1,3 @@
-import 'package:depi_lms/Features/Authentication/presentation/views/widgets/login_view_body.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/curved_nav_bar.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/home_student_view_body.dart';
 import 'package:depi_lms/Features/Setting/presentation/views/setting_student_view.dart';
@@ -16,7 +15,7 @@ class HomeStudentView extends StatefulWidget {
 
 class _HomeStudentViewState extends State<HomeStudentView> {
   final List<dynamic> viewsList = const [
-    LoginViewBody(),
+    CoursesStudentView(), //ranking
     CoursesStudentView(),
     HomeStudentViewBody(),
     TasksStudentView(),
