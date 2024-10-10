@@ -19,7 +19,6 @@ class RecordingTechnicalCoursesStudentViewBody extends StatelessWidget {
           children: [
             AppBarListTile(
               title: 'Recordings',
-              bill: true,
               edgeInsets: const EdgeInsets.symmetric(vertical: 7),
               leading: IconButton(
                   onPressed: () {

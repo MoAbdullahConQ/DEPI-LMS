@@ -20,7 +20,6 @@ class DetailsCourseStudentViewBody extends StatelessWidget {
           children: [
             AppBarListTile(
               title: 'Technical',
-              bill: true,
               edgeInsets: const EdgeInsets.symmetric(vertical: 7),
               leading: IconButton(
                   onPressed: () {

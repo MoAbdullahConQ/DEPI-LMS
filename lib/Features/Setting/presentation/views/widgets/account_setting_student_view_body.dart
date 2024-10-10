@@ -21,7 +21,6 @@ class AccountSettingStudentViewBody extends StatelessWidget {
             AppBarListTile(
               title: 'Edit Profile',
               edgeInsets: const EdgeInsets.symmetric(vertical: 7),
-              bill: true,
               leading: IconButton(
                   onPressed: () {
                     GoRouter.of(context).pop();
@@ -115,4 +114,3 @@ class AccountSettingStudentViewBody extends StatelessWidget {
     );
   }
 }
-

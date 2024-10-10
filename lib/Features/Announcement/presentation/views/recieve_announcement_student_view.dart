@@ -1,26 +1,14 @@
-import 'package:depi_lms/Features/Announcement/presentation/views/widgets/revieve_announcements_view_body.dart';
-import 'package:depi_lms/constant.dart';
+import 'package:depi_lms/Features/Announcement/presentation/views/widgets/recieve_announcement_student_view_body.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class RecieveAnnouncementStudentView extends StatelessWidget {
   const RecieveAnnouncementStudentView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
-        child: RecieveAnnouncementsViewBody(
-          
-          leading: IconButton(
-              onPressed: () {
-                GoRouter.of(context).pop();
-              },
-              icon: const Icon(
-                Icons.arrow_back,
-                color: kWhite,
-              )),
-        ),
+        child: RecieveAnnouncementStudentViewBody(),
       ),
     );
   }

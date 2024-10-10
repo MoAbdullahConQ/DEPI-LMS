@@ -10,6 +10,7 @@ class AnnouncementCardListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
         padding: const EdgeInsets.symmetric(vertical: 10),
+        
         itemCount: announcementCardList.length,
         itemBuilder: (context, index) {
           return announcementCardList[index];
