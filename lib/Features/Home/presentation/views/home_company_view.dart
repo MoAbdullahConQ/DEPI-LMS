@@ -1,6 +1,6 @@
 import 'package:depi_lms/Features/Home/presentation/views/widgets/curved_nav_bar.dart';
 import 'package:depi_lms/Features/Home/presentation/views/widgets/home_company_view_body.dart';
-import 'package:depi_lms/Features/Home/presentation/views/widgets/home_ministry_view_body.dart';
+import 'package:depi_lms/Features/StudentsCompany/presentation/views/student_company_view.dart';
 import 'package:depi_lms/Features/TracksCourses/presentation/views/tracks_company_view.dart';
 import 'package:depi_lms/constant.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,7 @@ class HomeCompanyView extends StatefulWidget {
 
 class _HomeStudentViewState extends State<HomeCompanyView> {
   final List<dynamic> viewsList = const [
-    HomeMinistryViewBody(),
+    StudentCompanyView(),
     HomeCompanyViewBody(),
     TracksCompanyView() 
   ];

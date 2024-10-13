@@ -24,6 +24,8 @@ import 'package:depi_lms/Features/Setting/presentation/views/account_setting_stu
 import 'package:depi_lms/Features/Setting/presentation/views/setting_ministry_view.dart';
 import 'package:depi_lms/Features/Setting/presentation/views/setting_student_view.dart';
 import 'package:depi_lms/Features/Splash/presentation/views/splash_view.dart';
+import 'package:depi_lms/Features/StudentsCompany/presentation/views/detalid_student_company_view.dart';
+import 'package:depi_lms/Features/StudentsCompany/presentation/views/student_company_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/attached_tasks_files_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/attendnce_view.dart';
 import 'package:depi_lms/Features/Tasks/presentation/views/details_tasks_student_view.dart';
@@ -142,6 +144,9 @@ abstract class AppRouter {
       '/complaintsDetailsMinistryView';
   static const kComplaintsCompanyView = '/complaintsCompanyView';
   static const kComplaintsDetailsCompanyView = '/complaintsDetailsCompanyView';
+
+  static const kStudentCompanyView = '/studentCompanyView';
+  static const kDetalidStudentCompanyView = '/detalidStudentCompanyView';
 
   static final routers = GoRouter(
     routes: [
@@ -452,6 +457,18 @@ abstract class AppRouter {
           path: kComplaintsDetailsCompanyView,
           builder: (context, state) {
             return const ComplaintsDetailsCompanyView();
+          }),
+
+      GoRoute(
+          path: kStudentCompanyView,
+          builder: (context, state) {
+            return const StudentCompanyView();
+          }),
+
+      GoRoute(
+          path: kDetalidStudentCompanyView,
+          builder: (context, state) {
+            return const DetalidStudentCompanyView();
           }),
     ],
   );
